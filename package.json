@@ -1,0 +1,18 @@
+{
+  "name": "2015-12_portfolio_version_with_node_routing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lindsay Elia",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^1.2.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "morgan": "^1.6.1",
+    "serve-favicon": "^2.3.0"
+  }
+}

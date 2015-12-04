@@ -1,0 +1,478 @@
+/******************************************
+FONTS
+******************************************/
+
+/* also loading some fonts from Typekit in head of html */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,500,700,800); /* Headings ?? */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,700italic,900); /* body / content */
+
+
+/* I seem to have access to general fonts of:; "Avenir Next","Avenir","Helvetica Neue",Helvetica,Arial, all with browser? */
+
+/******************************************
+COLOR PALETTE
+******************************************/
+
+/*
+
+white - blue tint
+#F7F8FA
+rgb(247,248,250)
+
+mid-gray, purple tone
+#939097
+
+black
+#000000
+
+pea green / mellow yellow
+#D6CC4E
+
+green
+#7C812D
+
+teal
+#008F7D
+
+dark blue
+#475865
+
+
+lighter gray for readability
+using this on blog pages for tags background color
+#BEBDBB
+
+old 'medium' gray for readability
+using this on blog pages for h2s & h4s
+#838280
+
+slightly darker gray 
+for navbar text, on top of yellow background
+#454544
+
+*/
+
+/******************************************
+GENERAL
+******************************************/
+
+/* Would like to add this in but need to adjust navbar to do so */
+/** {
+	box-sizing: border-box;
+}*/
+
+body {
+	/*font-family: 'Railway', sans-serif;*/
+	/*font-family: "Lato",sans-serif;*/
+	font-family: "Avenir Next","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 1em;
+	background-color: #F7F8FA;
+	/*color: #454544;*/
+}
+
+
+/******************************************
+BACKGROUND ANIMATION
+******************************************/
+
+#canvas { 
+	margin: 0px;
+	background: rgb(247,248,250);
+}
+
+
+/******************************************
+NAVBAR
+******************************************/
+
+#topDiv {
+	opacity: 0.9; /* this lets animation work, albiet clunkily, behind it */
+	height: 70px;
+	background-color: #D6CC4E;
+	position: absolute;  /* this lets me place the navbar over the canvas element */
+	top: 0;  /* this lets me place the navbar over the canvas element */
+	left: 0;  /* this lets me place the navbar over the canvas element */
+	margin: 0 auto;
+	width: 100%;
+	border-bottom: 10px solid #939097;
+}
+
+#navbarCentered {
+	margin: 0 auto;
+	max-width: 565px;
+	/*height: 65px;*/
+	/*background-color: blue;*/
+	padding-top: 5px;
+}
+
+#navbarCentered>span {
+	float: left;
+	padding: 30px 20px 0 20px;
+	font-size: 1.2em;
+}
+
+#navbarCentered>span>a {
+	color: #454544;
+}
+
+#navbarCentered>span>a:hover {
+	color: #F7F8FA;
+}
+
+#navbarCentered>span.currentPage {
+	border-bottom: 10px solid #475865;  /* dark blue */
+	padding-bottom: 8px;
+}
+
+
+
+
+
+/******************************************
+CENTER AREA
+******************************************/
+
+.aboutMeText {
+	max-width: 550px;
+	background-color: #F7F8FA;
+	margin: 0 auto;
+	padding: 0 50px;
+	position: relative; /* this lets me place the content over the canvas element */
+	top: 180px;  /* this lets me place the content over the canvas element */
+	left: 14px;  /* this lets me place the content over the canvas element */ 
+}
+
+#helloItsMe>h1 {
+	/*font-family: "angie-sans",sans-serif;*/
+	font-family: "acta-poster-swashes", sans-serif;
+	font-size: 5em;
+	position: relative;
+	left: -146px;
+	/*top: 20px;*/
+	line-height: 1;
+	margin-bottom: 50px;
+	display: inline;
+	color: #475865;  /* blue */
+}
+
+.headshot {
+	border-radius: 50%;
+	/*float: right;*/
+	position: absolute;
+	left: 400px;
+	top: -60px;
+	display: inline;
+}
+
+.introTextA {
+	max-width: 550px;
+	background-color: #F7F8FA;
+	margin: 0;
+	padding: 40px 0 20px 0;
+}
+
+.introTextB {
+	max-width: 550px;
+	background-color: #F7F8FA;
+	margin: 0;
+	padding: 0 0 20px 0;
+}
+
+
+.columnOfBoxes {
+	max-width: 240px;
+	background-color: #F7F8FA;
+	margin: 0 auto;
+	padding: 20px;
+	position: relative; /* this lets me place the content over the canvas element */
+	top: 160px;  /* this lets me place the content over the canvas element */
+	left: 14px; /* this lets me place the content over the canvas element  */
+}
+
+
+.boxy {
+	/*max-width: 150px;*/
+	margin: 40px 20px;
+	border: 3px solid #939097;
+	border-radius: 10px;
+	text-align: center;
+	padding: 30px 20px;
+	font-size: 1.2em;
+}
+
+
+
+/* not on index page */
+.main-content-not-home-page {
+	margin-top: 150px;
+	/*margin-left: 200px;*/
+}
+
+
+
+/******************************************
+FOOTER
+******************************************/
+
+#footerDiv {
+	opacity: 0.9;  /* this lets animation work, albiet clunkily, behind it */
+	background-color: #939097;
+	height: 200px;
+	clear: both;
+	position: absolute; /* this lets me place the content over the canvas element */
+	top: 1400px; /* this lets me place the content over the canvas element */
+	left: 0;
+	width: 100%;
+}
+
+
+/* portfolio page only */
+#footerDiv-not-home-page {
+	opacity: 0.9;  
+	background-color: #939097;
+	height: 200px;
+	top: 3200px;		/* This is the only difference - should be refactored. */
+	left: 0;
+	width: 100%;
+}
+
+/* change icon alignment to be centered on smaller screen sizes */
+.contactIcons {
+	position: absolute;
+	right: 0;
+}
+
+.contactIcons>li {
+	list-style: none;
+	float: left;
+	padding: 0 10px;
+	margin-top: 10px;
+	/*background-color: purple;*/
+}
+
+
+.footerBlurb {
+	position: absolute;
+	right: 0;
+	clear: both;
+	margin-top: 80px;
+	text-align: right;
+	padding-right: 18px;
+	/*background-color: blue;*/
+}
+
+.paragraph-footer {
+	line-height: .5;	
+}
+
+#footerNavbar {
+	position: absolute;
+	right: 0;
+	margin-top: 160px;
+	padding-right: 18px;
+}
+
+#footerNavbar>li {
+	float: left;
+	list-style: none;
+	padding-left: 25px;
+}
+
+/******************************************
+ICONS
+******************************************/
+
+.boxy>.icon {
+	color: #475865; 
+	/* dark blue */
+}
+
+.contactIcons>.icon, .footerBlurb>p>.icon {
+	color: #D6CC4E;
+}
+
+i.icon {
+	text-decoration: none;
+}
+
+/******************************************
+LINKS
+******************************************/
+
+a {
+	color: #D6CC4E;
+	text-decoration: none;
+	/*font-weight: 500;*/
+}
+
+a.darkLink {
+	color: black;
+}
+
+a:hover>.boxy{
+	background-color: #D6CC4E;
+
+}
+
+a:hover {
+	color: #F7F8FA;
+	background-color: #939097;
+}
+
+#footerDiv>a:hover {
+	color: #F7F8FA;
+}
+
+
+
+/******************************************
+RESUME PAGE
+******************************************/
+
+.timeline-summary-section {
+	margin: 0 auto;
+	padding: 100px 5% 25px 5%;
+	text-align: center;
+	max-width: 570px;
+}
+
+/* h1 */
+.timeline-header {
+	/*font-family: 'Railway', sans-serif;*/
+	/*font-family: "Lato",sans-serif;*/
+	font-weight: normal;
+}
+
+
+.resume-content-container-outer {
+	background-color: #475865;  /* blue */
+	/*margin-bottom: 200px;*/
+}
+
+/* center bar CSS found on http://jeaniechung.com/#/cv */
+.resume-content-container-outer::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -5px;
+	height: 250%;			/* TO FIX:;
+							I doubled this so it would extend - not sure why it's not same height as element appears to me */
+							/* breaks when screen is made smaller - to fix later */
+							/* pushes bottom part of page out further - adds white space / moves away from bottom of page */
+	width: 10px;
+	/*background-color: #F7F8FA;*/
+	
+	background: linear-gradient(
+					to bottom, 
+					transparent 0, 
+					#F7F8FA 8%, 
+					#F7F8FA 92%, 
+					transparent 100%
+					);
+
+	/*background: linear-gradient(to bottom,rgba(31,102,177,0) 0,#1f66b1 8%,#1f66b1 92%,rgba(158,21,15,0) 100%);*/
+}
+
+.resume-content-container-inner {
+	width: 95%;
+	margin: auto;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.timeline-blurb {
+	/*border: 2px solid gray;*/
+	padding: 20px;
+	background-color: #F7F8FA;
+	box-shadow: 0 10px 10px -5px rgba(0,0,0, .8);
+}
+
+.timeline-left {
+	width: 40%;
+	margin-left: 2.5%;
+}
+
+.timeline-right {
+	width: 40%;
+	margin-left: 54%; 
+}
+
+.timeline-heading {
+	font-size: 1.2em;
+}
+
+.timeline-subheading {
+	text-transform: uppercase;
+	font-size: 1.2em;
+}
+
+.timeline-date {
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.section-break {
+	color: #F7F8FA;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #475865;  /* blue */
+	width: 220px;
+	position: relative;
+	left: 41.5%;		/* TO FIX: this is not centered with summary section because 
+						it's nested in more divs with more margins, etc than the summary section has */
+}
+
+
+
+/******************************************
+PORTFOLIO PAGE
+******************************************/
+
+/* h1 & h2 */
+.portfolio-header {
+	/*font-family: 'Railway', sans-serif;*/
+	/*font-family: "Lato",sans-serif;*/
+	font-weight: normal;
+	text-align: center;	
+}
+
+.portfolio-header-inline {
+	display: inline;
+	margin: auto 25px;
+}
+
+.portfolio-sub-heading {
+	text-align: center;
+}
+
+.project-container {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 800px;
+	margin-bottom: 100px;
+}
+
+.portfolio-underline {
+	border-bottom: 3px solid #475865;   /* blue */
+	/*height: 2px;*/
+	/*background: radial-gradient(#475865, #F7F8FA);  /* blue, white */
+}
+
+.project-description {
+	width: 80%;
+	margin: 0 auto;
+}
+
+
+.portfolio-image {
+	border: 1px solid gray;
+}
+
+.portfolio-image-wrapper {
+	text-align: center;
+}
+
+
+
+
