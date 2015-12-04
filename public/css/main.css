@@ -85,7 +85,20 @@ BACKGROUND ANIMATION
 NAVBAR
 ******************************************/
 
-#topDiv {
+/* index page only */
+.topDivHome {
+	opacity: 0.9; /* this lets animation work, albiet clunkily, behind it */
+	height: 70px;
+	background-color: #D6CC4E;
+	position: absolute;  /* this lets me place the navbar over the canvas element */
+	top: 0;  /* this lets me place the navbar over the canvas element */
+	left: 0;  /* this lets me place the navbar over the canvas element */
+	margin: 0 auto;
+	width: 100%;
+	border-bottom: 10px solid #939097;
+}
+
+.topDiv {
 	opacity: 0.9; /* this lets animation work, albiet clunkily, behind it */
 	height: 70px;
 	background-color: #D6CC4E;

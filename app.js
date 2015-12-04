@@ -34,17 +34,20 @@ app.get("/", function(req, res){
 
 // INDEX PAGE
 app.get("/index", function(req, res){
-	res.render("statics/index", {email:lindsayEmailAddress});
+	// console.log("req.url >> ", req.url);
+	res.render("statics/index", {email:lindsayEmailAddress, path:req.url});
 });
 
 // ABOUT
 app.get("/portfolio", function(req, res){
-	res.render("statics/portfolio", {email:lindsayEmailAddress});
+	// console.log("req.url >> ", req.url);
+	res.render("statics/portfolio", {email:lindsayEmailAddress, path:req.url});
 });
 
 // RESUME
 app.get("/resume", function(req, res){
-	res.render("statics/resume", {email:lindsayEmailAddress});
+	// console.log("req.url >> ", req.url);
+	res.render("statics/resume", {email:lindsayEmailAddress, path:req.url});
 });
 
 // BLOG - HOSTED ON TUMBLR

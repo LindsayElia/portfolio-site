@@ -1,1 +1,27 @@
-navbar.ejs
+<div class="topDiv">
+
+	<div id="navbarCentered">
+
+		<% if (path === "/index"){ %>
+			<span class="currentPage animated fadeInDown"><a href="/index">Home</a></span>
+		<% } else { %>
+			<span><a href="/index">Home</a></span>
+		<% } %>
+
+		<% if (path === "/portfolio"){ %>
+			<span class="currentPage animated fadeInDown"><a href="/portfolio">Portfolio</a></span>
+		<% } else { %>
+			<span><a href="/portfolio">Portfolio</a></span>
+		<% } %>
+
+		<% if (path === "/resume"){ %>
+			<span class="currentPage animated fadeInDown"><a href="/resume">Resume</a></span>
+		<% } else { %>
+			<span><a href="/resume">Resume</a></span>
+		<% } %>
+
+		<span><a href="/blog">Blog</a></span>
+
+	</div>
+
+</div> <!-- close <div id="topDiv"> -->
