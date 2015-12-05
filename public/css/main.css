@@ -2,6 +2,11 @@
 FONTS
 ******************************************/
 
+/* 
+***************************** TO FIX *****************************
+Am I using all of these fonts?
+Remove ones not being used for page load time */
+
 /* also loading some fonts from Typekit in head of html */
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200,500,700,800); /* Headings ?? */
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,700italic,900); /* body / content */
@@ -14,6 +19,9 @@ COLOR PALETTE
 ******************************************/
 
 /*
+
+***************************** TO FIX *****************************
+Remove colors not being used
 
 white - blue tint
 #F7F8FA
