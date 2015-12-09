@@ -76,8 +76,12 @@ body {
 	background-color: #F7F8FA;
 }
 
+.clearfix {
+	display: inline-block;
+}
+
 .clearfix::after {
-    content: “”;
+    content: “ ”;
     display: table;
     clear: both;
 }
@@ -203,6 +207,7 @@ CENTER AREA - ALL PAGES EXCEPT HOME PAGE
 ******************************************/
 
 .main-content {
+	/* no rules yet */
 }
 
 
@@ -247,6 +252,55 @@ CENTER AREA - HOME PAGE ONLY
 	display: none;
 }
 
+
+/******************************************
+FOOTER
+******************************************/
+
+.footer {
+	background-color: #939097;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 50px;
+}
+
+.contact-icons {
+	margin-bottom: 0.5em;
+	padding: 0;
+}
+
+	.contact-icons>li {
+		list-style: none;
+		float: left;
+		padding: 0 10px;
+	}
+
+.footer-blurb {
+	padding-left: 3em;
+	padding-right: 3em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+	.footer-blurb>p {
+		padding: 0;
+		margin: 0;
+	}
+
+.footer-navbar {
+	margin-bottom: 0.5em;
+	padding: 0;
+}
+
+	.footer-navbar>li {
+		list-style: none;
+		float: left;
+		padding: 0 10px;
+	}
+
+
+
+
 /************************************************************************************
 									MEDIA QUERIES
 ************************************************************************************/
@@ -286,19 +340,13 @@ CENTER AREA - HOME PAGE ONLY
 		margin-left: 0;
 	}
 
-	.welcome-blurb {
-		padding-left: 2em;  /* to give space from animation */
-		padding-right: 2em;  /* to give space from animation */
-	}
 
 	/******************************************
 	ANIMATIONS - FROM http://daneden.me/animate
 	******************************************/
-
 	/*!
 	Animate.css - http://daneden.me/animate
 	Licensed under the MIT license - http://opensource.org/licenses/MIT
-
 	Copyright (c) 2015 Daniel Eden
 	*/
 
@@ -343,6 +391,13 @@ CENTER AREA - HOME PAGE ONLY
 	  -webkit-animation-name: fadeInDown;
 	  animation-name: fadeInDown;
 	}
+
+
+	.welcome-blurb {
+		padding-left: 2em;  /* to give space from animation */
+		padding-right: 2em;  /* to give space from animation */
+	}
+
 
 
 
@@ -399,6 +454,17 @@ CENTER AREA - HOME PAGE ONLY
 			
 		}
 
+	.footer-blurb {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+	/* footer spans */
+	.line-break {
+		display: block;
+	}
+
+
 }  /* end media query for min-width: 595px */
 
 
@@ -407,84 +473,6 @@ CENTER AREA - HOME PAGE ONLY
 
 
 
-
-
-
-
-
-
-
-
-/******************************************
-FOOTER - ALL PAGES
-******************************************/
-
-/* portfolio page only */
-.footer-not-home-page {
-	opacity: 0.9;  
-	background-color: #939097;
-	height: 200px;
-	top: 3200px;		/* This is the only difference - should be refactored. */
-	left: 0;
-	width: 100%;
-}
-
-.contact-icons {
-	position: absolute;
-	right: 0;
-}
-
-	.contact-icons>li {
-		list-style: none;
-		float: left;
-		padding: 0 10px;
-		margin-top: 10px;
-		/*background-color: purple;*/
-	}
-
-.footer-blurb {
-	position: absolute;
-	right: 0;
-	clear: both;
-	margin-top: 80px;
-	text-align: right;
-	padding-right: 18px;
-	/*background-color: blue;*/
-}
-
-	.footer-blurb>p {
-		line-height: .5;	
-	}
-
-.footer-navbar {
-	position: absolute;
-	right: 0;
-	margin-top: 160px;
-	padding-right: 18px;
-}
-
-	.footer-navbar>li {
-		float: left;
-		list-style: none;
-		padding-left: 25px;
-	}
-
-
-/******************************************
-FOOTER - HOME PAGE
-******************************************/
-
-.footer {
-/*	opacity: 0.9; */ /* this lets animation work, albiet clunkily, behind it */
-/*	background-color: #939097;
-	height: 200px;
-	clear: both;*/
-	/*position: absolute; *//* this lets me place the content over the canvas element */
-	/*top: 1400px;*/ /* this lets me place the content over the canvas element */
-/*	left: 0;
-	width: 100%;*/
-	display: none;
-}
 
 
 
@@ -637,24 +625,6 @@ PORTFOLIO PAGE
 .portfolio-image-wrapper {
 	text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

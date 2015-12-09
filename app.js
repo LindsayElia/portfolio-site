@@ -57,7 +57,7 @@ app.get("/blog", function(req, res){
 
 // FALLBACK ROUTE
 app.get("*", function(req, res){
-	res.render("errors/404", {email:lindsayEmailAddress});
+	res.render("errors/404", {email:lindsayEmailAddress, path:req.url});
 });
 
 
