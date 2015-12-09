@@ -248,10 +248,9 @@ MEDIA QUERIES
 	}
 
 	.nav-item>a {
-		padding: 10px 20px;
+		padding: 10px 10px;
 		margin-left: -4px;
 		display: block;
-		/*background-color: red;*/
 	}
 
 	.current-page {
@@ -321,6 +320,15 @@ MEDIA QUERIES
 	}
 
 
+
+}
+
+
+@media (min-width: 595px) {
+
+	.nav-item>a {
+		padding: 10px 20px;
+	}
 
 }
 
