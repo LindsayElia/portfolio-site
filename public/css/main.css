@@ -181,7 +181,6 @@ HEADER & NAVBAR
 .container-header-outer {
 	background-color: #D6CC4E;
 	border-bottom: 20px solid #939097; /* gray */
-	padding-bottom: 30px;
 }
 
 .container-header-inner {
@@ -233,7 +232,6 @@ MEDIA QUERIES
 
 	.container-header-outer {
 		border-bottom: 10px solid #939097; /* gray */
-		padding-bottom: 0px;
 	}
 	
 	.container-header-inner {
