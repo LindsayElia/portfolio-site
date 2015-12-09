@@ -1,0 +1,33 @@
+<div class="container-header-outer">
+
+	<div class="container-header-inner">
+
+		<!-- NOTE: putting logic here in the view is not best practice,
+		would be better to extract it into a javascript file on the frontend
+		but this is the easiest way for me to do this at the moment -->
+
+		<ul class="nav-container">
+			<% if (path === "/index"){ %>
+				<li class="nav-item current-page animated fadeInDown"><a href="/index">Home</a></li>
+			<% } else { %>
+				<li class="nav-item"><a href="/index">Home</a></li>
+			<% } %>
+
+			<% if (path === "/portfolio"){ %>
+				<li class="nav-item current-page animated fadeInDown"><a href="/portfolio">Portfolio</a></li>
+			<% } else { %>
+				<li class="nav-item"><a href="/portfolio">Portfolio</a></li>
+			<% } %>
+
+			<% if (path === "/resume"){ %>
+				<li class="nav-item current-page animated fadeInDown"><a href="/resume">Resume</a></li>
+			<% } else { %>
+				<li class="nav-item"><a href="/resume">Resume</a></li>
+			<% } %>
+
+			<li class="nav-item"><a href="/blog">Blog</a></li>
+		</ul>
+
+	</div> <!-- close <div class="container-header-inner"> -->
+
+</div> <!-- close <div class="container-header-outer"> -->

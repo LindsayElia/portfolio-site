@@ -66,18 +66,20 @@ for navbar text, on top of yellow background
 BASE STYLES - GENERAL
 ******************************************/
 
-/* Would like to add this in but need to adjust navbar to do so */
-/** {
+* {
 	box-sizing: border-box;
-}*/
+}
 
 body {
-	/*font-family: 'Railway', sans-serif;*/
-	/*font-family: "Lato",sans-serif;*/
 	font-family: "Avenir Next","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 1em;
 	background-color: #F7F8FA;
-	/*color: #454544;*/
+}
+
+.clearfix::after {
+    content: “”;
+    display: table;
+    clear: both;
 }
 
 
@@ -128,68 +130,24 @@ a:hover>.boxy{
 	background-color: #D6CC4E;
 }
 
+
+
+
+
 /******************************************
 LAYOUT
 ******************************************/
 
 
 
-/******************************************
-ANIMATIONS - FROM http://daneden.me/animate
-******************************************/
 
-/*!
-Animate.css - http://daneden.me/animate
-Licensed under the MIT license - http://opensource.org/licenses/MIT
 
-Copyright (c) 2015 Daniel Eden
-*/
 
-@charset "UTF-8";
 
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-}
 
 
 /******************************************
-BACKGROUND ANIMATION - HOME PAGE
+BACKGROUND ANIMATION - HOME PAGE ONLY
 ******************************************/
 
 #canvas { 
@@ -197,12 +155,6 @@ BACKGROUND ANIMATION - HOME PAGE
 	background: rgb(247,248,250);
 }
 
-
-/******************************************
-NAVBAR
-******************************************/
-
-/* index page only */
 .full-home-page-background {
 	opacity: 0.9; /* this lets animation work, albiet clunkily, behind it */
 	height: 70px;
@@ -212,47 +164,167 @@ NAVBAR
 	left: 0;  /* this lets me place the navbar over the canvas element */
 	margin: 0 auto;
 	width: 100%;
-	border-bottom: 10px solid #939097;
+	border-bottom: 10px solid #939097; /* gray */
 }
 
-.header-div {
-	opacity: 0.9; /* this lets animation work, albiet clunkily, behind it */
-	height: 70px;
+
+
+
+/******************************************
+HEADER & NAVBAR
+******************************************/
+
+.container-main-all-outer {
+	position: relative;
+}
+
+.container-header-outer {
 	background-color: #D6CC4E;
-	position: absolute;  /* this lets me place the navbar over the canvas element */
-	top: 0;  /* this lets me place the navbar over the canvas element */
-	left: 0;  /* this lets me place the navbar over the canvas element */
-	margin: 0 auto;
-	width: 100%;
-	border-bottom: 10px solid #939097;
+	border-bottom: 20px solid #939097; /* gray */
+	padding-bottom: 30px;
 }
 
-.navbar-top {
-	margin: 0 auto;
-	max-width: 565px;
-	/*height: 65px;*/
+.container-header-inner {
 	/*background-color: blue;*/
-	padding-top: 5px;
+	padding-top: 35px;
+/*	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 8px;*/
+	text-align: center;
 }
 
-	.navbar-top>span {
-		float: left;
-		padding: 30px 20px 0 20px;
+	.nav-container {
+		padding: 0;
+		margin: 0;
+	}
+
+	.nav-item {
 		font-size: 1.2em;
+		list-style: none;
+		border-bottom: 2px solid #939097;  /* mid-gray */
 	}
 
-	.navbar-top>span>a {
-		color: #454544;
+	.nav-item>a {
+		padding-top: 8px;
+		padding-bottom: 2px;
+		color: #454544; /* dark-gray */
+		display: block;
 	}
 
-	.navbar-top>span>a:hover {
-		color: #F7F8FA;
+	.nav-item>a:hover {
+		color: #F7F8FA; 
 	}
 
-	.navbar-top>span.currentPage {
+	.current-page {
+		border-bottom: 2px solid #475865;  /* dark blue */
+		font-weight: bold;
+	}
+
+	.current-page>a {
+		color: #475865;  /* dark blue */
+	}
+
+
+/******************************************
+MEDIA QUERIES
+******************************************/
+
+@media (min-width: 499px) {
+
+	.container-header-outer {
+		border-bottom: 10px solid #939097; /* gray */
+		padding-bottom: 0px;
+	}
+	
+	.container-header-inner {
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	.nav-item {
+		display: inline-block;
+		border-bottom: none;
+		font-weight: normal;
+	}
+
+	.nav-item>a {
+		padding: 10px 20px;
+		margin-left: -4px;
+		display: block;
+		/*background-color: red;*/
+	}
+
+	.current-page {
 		border-bottom: 10px solid #475865;  /* dark blue */
-		padding-bottom: 8px;
+		margin-bottom: -10px;
+		margin-left: -4px;
+		font-weight: normal;
 	}
+
+	.current-page>a {
+		color: #454544; /* dark-gray */
+		margin-left: 0;
+	}
+
+
+	/******************************************
+	ANIMATIONS - FROM http://daneden.me/animate
+	******************************************/
+
+	/*!
+	Animate.css - http://daneden.me/animate
+	Licensed under the MIT license - http://opensource.org/licenses/MIT
+
+	Copyright (c) 2015 Daniel Eden
+	*/
+
+	@charset "UTF-8";
+
+	.animated {
+	  -webkit-animation-duration: 1s;
+	  animation-duration: 1s;
+	  -webkit-animation-fill-mode: both;
+	  animation-fill-mode: both;
+	}
+
+	@-webkit-keyframes fadeInDown {
+	  from {
+	    opacity: 0;
+	    -webkit-transform: translate3d(0, -100%, 0);
+	    transform: translate3d(0, -100%, 0);
+	  }
+
+	  to {
+	    opacity: 1;
+	    -webkit-transform: none;
+	    transform: none;
+	  }
+	}
+
+	@keyframes fadeInDown {
+	  from {
+	    opacity: 0;
+	    -webkit-transform: translate3d(0, -100%, 0);
+	    transform: translate3d(0, -100%, 0);
+	  }
+
+	  to {
+	    opacity: 1;
+	    -webkit-transform: none;
+	    transform: none;
+	  }
+	}
+
+	.fadeInDown {
+	  -webkit-animation-name: fadeInDown;
+	  animation-name: fadeInDown;
+	}
+
+
+
+}
+
+
 
 
 /******************************************
@@ -558,6 +630,26 @@ PORTFOLIO PAGE
 .portfolio-image-wrapper {
 	text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
