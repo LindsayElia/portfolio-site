@@ -60,6 +60,80 @@ for navbar text, on top of yellow background
 
 */
 
+
+
+/******************************************
+BASE STYLES - GENERAL
+******************************************/
+
+/* Would like to add this in but need to adjust navbar to do so */
+/** {
+	box-sizing: border-box;
+}*/
+
+body {
+	/*font-family: 'Railway', sans-serif;*/
+	/*font-family: "Lato",sans-serif;*/
+	font-family: "Avenir Next","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 1em;
+	background-color: #F7F8FA;
+	/*color: #454544;*/
+}
+
+
+/******************************************
+BASE STYLES - ICONS
+******************************************/
+
+.boxy>.icon {
+	color: #475865; 
+	/* dark blue */
+}
+
+.contact-icons>.icon {
+	color: #D6CC4E;
+}
+
+i.icon {
+	text-decoration: none;
+}
+
+/******************************************
+BASE STYLES - LINKS - ALL PAGES
+******************************************/
+
+a {
+	color: #D6CC4E;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #F7F8FA;
+	background-color: #939097;
+}
+
+.footer>a:hover {
+	color: #F7F8FA;
+}
+
+/******************************************
+BASE STYLES - LINKS - HOME PAGE
+******************************************/
+
+a.dark-link {
+	color: black;
+}
+
+a:hover>.boxy{
+	background-color: #D6CC4E;
+}
+
+/******************************************
+LAYOUT
+******************************************/
+
+
+
 /******************************************
 ANIMATIONS - FROM http://daneden.me/animate
 ******************************************/
@@ -115,26 +189,7 @@ Copyright (c) 2015 Daniel Eden
 
 
 /******************************************
-GENERAL
-******************************************/
-
-/* Would like to add this in but need to adjust navbar to do so */
-/** {
-	box-sizing: border-box;
-}*/
-
-body {
-	/*font-family: 'Railway', sans-serif;*/
-	/*font-family: "Lato",sans-serif;*/
-	font-family: "Avenir Next","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: 1em;
-	background-color: #F7F8FA;
-	/*color: #454544;*/
-}
-
-
-/******************************************
-BACKGROUND ANIMATION
+BACKGROUND ANIMATION - HOME PAGE
 ******************************************/
 
 #canvas { 
@@ -148,7 +203,7 @@ NAVBAR
 ******************************************/
 
 /* index page only */
-.topDivHome {
+.full-home-page-background {
 	opacity: 0.9; /* this lets animation work, albiet clunkily, behind it */
 	height: 70px;
 	background-color: #D6CC4E;
@@ -160,7 +215,7 @@ NAVBAR
 	border-bottom: 10px solid #939097;
 }
 
-.topDiv {
+.header-div {
 	opacity: 0.9; /* this lets animation work, albiet clunkily, behind it */
 	height: 70px;
 	background-color: #D6CC4E;
@@ -172,7 +227,7 @@ NAVBAR
 	border-bottom: 10px solid #939097;
 }
 
-#navbarCentered {
+.navbar-top {
 	margin: 0 auto;
 	max-width: 565px;
 	/*height: 65px;*/
@@ -180,34 +235,41 @@ NAVBAR
 	padding-top: 5px;
 }
 
-#navbarCentered>span {
-	float: left;
-	padding: 30px 20px 0 20px;
-	font-size: 1.2em;
-}
+	.navbar-top>span {
+		float: left;
+		padding: 30px 20px 0 20px;
+		font-size: 1.2em;
+	}
 
-#navbarCentered>span>a {
-	color: #454544;
-}
+	.navbar-top>span>a {
+		color: #454544;
+	}
 
-#navbarCentered>span>a:hover {
-	color: #F7F8FA;
-}
+	.navbar-top>span>a:hover {
+		color: #F7F8FA;
+	}
 
-#navbarCentered>span.currentPage {
-	border-bottom: 10px solid #475865;  /* dark blue */
-	padding-bottom: 8px;
-}
-
-
-
+	.navbar-top>span.currentPage {
+		border-bottom: 10px solid #475865;  /* dark blue */
+		padding-bottom: 8px;
+	}
 
 
 /******************************************
-CENTER AREA
+CENTER AREA - ALL PAGES
 ******************************************/
 
-.aboutMeText {
+.main-content-not-home-page {
+	margin-top: 150px;
+	/*margin-left: 200px;*/
+}
+
+
+/******************************************
+CENTER AREA - HOME PAGE
+******************************************/
+
+.welcome-blurb {
 	max-width: 550px;
 	background-color: #F7F8FA;
 	margin: 0 auto;
@@ -217,44 +279,43 @@ CENTER AREA
 	left: 14px;  /* this lets me place the content over the canvas element */ 
 }
 
-#helloItsMe>h1 {
-	/*font-family: "angie-sans",sans-serif;*/
-	font-family: "acta-poster-swashes", sans-serif;
-	font-size: 5em;
-	position: relative;
-	left: -146px;
-	/*top: 20px;*/
-	line-height: 1;
-	margin-bottom: 50px;
-	display: inline;
-	color: #475865;  /* blue */
-}
+	.welcome-blurb-logo-image>h1 {
+		/*font-family: "angie-sans",sans-serif;*/
+		font-family: "acta-poster-swashes", sans-serif;
+		font-size: 5em;
+		position: relative;
+		left: -146px;
+		/*top: 20px;*/
+		line-height: 1;
+		margin-bottom: 50px;
+		display: inline;
+		color: #475865;  /* blue */
+	}
 
-.headshot {
-	border-radius: 50%;
-	/*float: right;*/
-	position: absolute;
-	left: 400px;
-	top: -60px;
-	display: inline;
-}
+	.headshot {
+		border-radius: 50%;
+		/*float: right;*/
+		position: absolute;
+		left: 400px;
+		top: -60px;
+		display: inline;
+	}
 
-.introTextA {
-	max-width: 550px;
-	background-color: #F7F8FA;
-	margin: 0;
-	padding: 40px 0 20px 0;
-}
+	.introTextA {
+		max-width: 550px;
+		background-color: #F7F8FA;
+		margin: 0;
+		padding: 40px 0 20px 0;
+	}
 
-.introTextB {
-	max-width: 550px;
-	background-color: #F7F8FA;
-	margin: 0;
-	padding: 0 0 20px 0;
-}
+	.introTextB {
+		max-width: 550px;
+		background-color: #F7F8FA;
+		margin: 0;
+		padding: 0 0 20px 0;
+	}
 
-
-.columnOfBoxes {
+.boxes-group {
 	max-width: 240px;
 	background-color: #F7F8FA;
 	margin: 0 auto;
@@ -265,31 +326,77 @@ CENTER AREA
 }
 
 
-.boxy {
-	/*max-width: 150px;*/
-	margin: 40px 20px;
-	border: 3px solid #939097;
-	border-radius: 10px;
-	text-align: center;
-	padding: 30px 20px;
-	font-size: 1.2em;
-}
-
-
-
-/* not on index page */
-.main-content-not-home-page {
-	margin-top: 150px;
-	/*margin-left: 200px;*/
-}
-
+	.boxy {
+		/*max-width: 150px;*/
+		margin: 40px 20px;
+		border: 3px solid #939097;
+		border-radius: 10px;
+		text-align: center;
+		padding: 30px 20px;
+		font-size: 1.2em;
+	}
 
 
 /******************************************
-FOOTER
+FOOTER - ALL PAGES
 ******************************************/
 
-#footerDiv {
+/* portfolio page only */
+.footer-not-home-page {
+	opacity: 0.9;  
+	background-color: #939097;
+	height: 200px;
+	top: 3200px;		/* This is the only difference - should be refactored. */
+	left: 0;
+	width: 100%;
+}
+
+.contact-icons {
+	position: absolute;
+	right: 0;
+}
+
+	.contact-icons>li {
+		list-style: none;
+		float: left;
+		padding: 0 10px;
+		margin-top: 10px;
+		/*background-color: purple;*/
+	}
+
+.footer-blurb {
+	position: absolute;
+	right: 0;
+	clear: both;
+	margin-top: 80px;
+	text-align: right;
+	padding-right: 18px;
+	/*background-color: blue;*/
+}
+
+	.footer-blurb>p {
+		line-height: .5;	
+	}
+
+.footer-navbar {
+	position: absolute;
+	right: 0;
+	margin-top: 160px;
+	padding-right: 18px;
+}
+
+	.footer-navbar>li {
+		float: left;
+		list-style: none;
+		padding-left: 25px;
+	}
+
+
+/******************************************
+FOOTER - HOME PAGE
+******************************************/
+
+.footer {
 	opacity: 0.9;  /* this lets animation work, albiet clunkily, behind it */
 	background-color: #939097;
 	height: 200px;
@@ -301,102 +408,6 @@ FOOTER
 }
 
 
-/* portfolio page only */
-#footerDiv-not-home-page {
-	opacity: 0.9;  
-	background-color: #939097;
-	height: 200px;
-	top: 3200px;		/* This is the only difference - should be refactored. */
-	left: 0;
-	width: 100%;
-}
-
-/* change icon alignment to be centered on smaller screen sizes */
-.contactIcons {
-	position: absolute;
-	right: 0;
-}
-
-.contactIcons>li {
-	list-style: none;
-	float: left;
-	padding: 0 10px;
-	margin-top: 10px;
-	/*background-color: purple;*/
-}
-
-
-.footerBlurb {
-	position: absolute;
-	right: 0;
-	clear: both;
-	margin-top: 80px;
-	text-align: right;
-	padding-right: 18px;
-	/*background-color: blue;*/
-}
-
-.paragraph-footer {
-	line-height: .5;	
-}
-
-#footerNavbar {
-	position: absolute;
-	right: 0;
-	margin-top: 160px;
-	padding-right: 18px;
-}
-
-#footerNavbar>li {
-	float: left;
-	list-style: none;
-	padding-left: 25px;
-}
-
-/******************************************
-ICONS
-******************************************/
-
-.boxy>.icon {
-	color: #475865; 
-	/* dark blue */
-}
-
-.contactIcons>.icon, .footerBlurb>p>.icon {
-	color: #D6CC4E;
-}
-
-i.icon {
-	text-decoration: none;
-}
-
-/******************************************
-LINKS
-******************************************/
-
-a {
-	color: #D6CC4E;
-	text-decoration: none;
-	/*font-weight: 500;*/
-}
-
-a.darkLink {
-	color: black;
-}
-
-a:hover>.boxy{
-	background-color: #D6CC4E;
-
-}
-
-a:hover {
-	color: #F7F8FA;
-	background-color: #939097;
-}
-
-#footerDiv>a:hover {
-	color: #F7F8FA;
-}
 
 
 
