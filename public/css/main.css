@@ -23,7 +23,7 @@ COLOR PALETTE
 ***************************** TO FIX *****************************
 Remove colors not being used
 
-white - blue tint
+white with blue tint
 #F7F8FA
 rgb(247,248,250)
 
@@ -62,9 +62,9 @@ for navbar text, on top of yellow background
 
 
 
-/******************************************
-BASE STYLES - GENERAL
-******************************************/
+/************************************************************************************
+									BASE STYLES
+************************************************************************************/
 
 * {
 	box-sizing: border-box;
@@ -84,7 +84,7 @@ body {
 
 
 /******************************************
-BASE STYLES - ICONS
+ICONS
 ******************************************/
 
 .boxy>.icon {
@@ -93,7 +93,7 @@ BASE STYLES - ICONS
 }
 
 .contact-icons>.icon {
-	color: #D6CC4E;
+	color: #D6CC4E;  /* pea green / mellow yellow */
 }
 
 i.icon {
@@ -101,11 +101,11 @@ i.icon {
 }
 
 /******************************************
-BASE STYLES - LINKS - ALL PAGES
+LINKS - ALL PAGES
 ******************************************/
 
 a {
-	color: #D6CC4E;
+	color: #D6CC4E;  /* pea green / mellow yellow */
 	text-decoration: none;
 }
 
@@ -119,7 +119,7 @@ a:hover {
 }
 
 /******************************************
-BASE STYLES - LINKS - HOME PAGE
+LINKS - HOME PAGE
 ******************************************/
 
 a.dark-link {
@@ -127,23 +127,8 @@ a.dark-link {
 }
 
 a:hover>.boxy{
-	background-color: #D6CC4E;
+	background-color: #D6CC4E;  /* pea green / mellow yellow */
 }
-
-
-
-
-
-/******************************************
-LAYOUT
-******************************************/
-
-
-
-
-
-
-
 
 
 /******************************************
@@ -151,22 +136,13 @@ BACKGROUND ANIMATION - HOME PAGE ONLY
 ******************************************/
 
 #canvas { 
-	margin: 0px;
-	background: rgb(247,248,250);
+	display: none;
 }
 
-.full-home-page-background {
-	opacity: 0.9; /* this lets animation work, albiet clunkily, behind it */
-	height: 70px;
-	background-color: #D6CC4E;
-	position: absolute;  /* this lets me place the navbar over the canvas element */
-	top: 0;  /* this lets me place the navbar over the canvas element */
-	left: 0;  /* this lets me place the navbar over the canvas element */
-	margin: 0 auto;
-	width: 100%;
-	border-bottom: 10px solid #939097; /* gray */
-}
 
+/************************************************************************************
+									LAYOUT
+************************************************************************************/
 
 
 
@@ -175,20 +151,17 @@ HEADER & NAVBAR
 ******************************************/
 
 .container-main-all-outer {
-	position: relative;
+	position: relative;  /* need to give a position: relative so we can give canvas child element a position: absolute */
 }
 
 .container-header-outer {
-	background-color: #D6CC4E;
-	border-bottom: 20px solid #939097; /* gray */
+	background-color: #D6CC4E;  /* pea green / mellow yellow */
+	border-bottom: 20px solid #939097;  /* gray */
+	margin-bottom: 50px;
 }
 
 .container-header-inner {
-	/*background-color: blue;*/
 	padding-top: 35px;
-/*	padding-left: 1em;
-	padding-right: 1em;
-	padding-bottom: 8px;*/
 	text-align: center;
 }
 
@@ -225,8 +198,78 @@ HEADER & NAVBAR
 
 
 /******************************************
-MEDIA QUERIES
+CENTER AREA - ALL PAGES EXCEPT HOME PAGE
 ******************************************/
+
+.main-content {
+}
+
+
+/******************************************
+CENTER AREA - HOME PAGE ONLY
+******************************************/
+
+.logo {
+	margin: 0 auto;
+	width: 400px;
+	padding-top: 1px;  /* to take care of collapsing vertical margins */
+	padding-bottom: 1px;  /* to take care of collapsing vertical margins */
+	padding-right: 16px;  /* to center text since font seems to be off-center */
+	text-align: center;
+	font-family: "acta-poster-swashes", sans-serif;
+	font-size: 5em;
+	color: #475865;  /* blue */
+}
+
+.headshot {
+	display: block;
+	margin: 0 auto 50px auto;
+	max-width: 200px;
+	text-align: center;
+	border-radius: 50%;	
+}
+
+.welcome-blurb {
+	max-width: 550px;
+	margin: 0 auto;
+	background-color: #F7F8FA;  /* white with blue tint */
+	padding-left: 1em;  /* to give space from edges on smaller screens */
+	padding-right: 1em;  /* to give space from edges on smaller screens */
+	text-align: center;
+}
+
+	.welcome-blurb>p {
+		max-width: 550px;
+		background-color: #F7F8FA;
+		margin: 0;
+		padding: 0 0 20px 0;
+	}
+
+.boxes-group {
+	max-width: 240px;
+	background-color: #F7F8FA;
+	margin: 0 auto;
+	padding: 20px;
+	position: relative; /* this lets me place the content over the canvas element */
+	top: 160px;  /* this lets me place the content over the canvas element */
+	left: 14px; /* this lets me place the content over the canvas element  */
+}
+
+
+	.boxy {
+		/*max-width: 150px;*/
+		margin: 40px 20px;
+		border: 3px solid #939097;
+		border-radius: 10px;
+		text-align: center;
+		padding: 30px 20px;
+		font-size: 1.2em;
+	}
+
+
+/************************************************************************************
+									MEDIA QUERIES
+************************************************************************************/
 
 @media (min-width: 499px) {
 
@@ -328,91 +371,39 @@ MEDIA QUERIES
 		padding: 10px 20px;
 	}
 
+	/*	BACKGROUND ANIMATION - HOME PAGE ONLY  */
+	#canvas {
+		display: inline-block;  /* this was the default display type */
+		vertical-align: top;
+		margin: 0px;
+		background: rgb(247,248,250);  /* white with blue tint */
+	}
+
+	/*	TO GO WITH BACKGROUND ANIMATION - HOME PAGE ONLY  */
+	.full-home-page-overlay {
+		opacity: 1; /* this overlays all of the home page content on top of the canvas, and lets us see the canvas behind it */
+		height: 1px; /* needs a height or else it doesn't display the canvas behind it */
+		position: absolute;  /* this is absolutely positioned relative to its parent element */
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+
 }
 
 
 
 
-/******************************************
-CENTER AREA - ALL PAGES
-******************************************/
-
-.main-content-not-home-page {
-	margin-top: 150px;
-	/*margin-left: 200px;*/
-}
 
 
-/******************************************
-CENTER AREA - HOME PAGE
-******************************************/
-
-.welcome-blurb {
-	max-width: 550px;
-	background-color: #F7F8FA;
-	margin: 0 auto;
-	padding: 0 50px;
-	position: relative; /* this lets me place the content over the canvas element */
-	top: 180px;  /* this lets me place the content over the canvas element */
-	left: 14px;  /* this lets me place the content over the canvas element */ 
-}
-
-	.welcome-blurb-logo-image>h1 {
-		/*font-family: "angie-sans",sans-serif;*/
-		font-family: "acta-poster-swashes", sans-serif;
-		font-size: 5em;
-		position: relative;
-		left: -146px;
-		/*top: 20px;*/
-		line-height: 1;
-		margin-bottom: 50px;
-		display: inline;
-		color: #475865;  /* blue */
-	}
-
-	.headshot {
-		border-radius: 50%;
-		/*float: right;*/
-		position: absolute;
-		left: 400px;
-		top: -60px;
-		display: inline;
-	}
-
-	.introTextA {
-		max-width: 550px;
-		background-color: #F7F8FA;
-		margin: 0;
-		padding: 40px 0 20px 0;
-	}
-
-	.introTextB {
-		max-width: 550px;
-		background-color: #F7F8FA;
-		margin: 0;
-		padding: 0 0 20px 0;
-	}
-
-.boxes-group {
-	max-width: 240px;
-	background-color: #F7F8FA;
-	margin: 0 auto;
-	padding: 20px;
-	position: relative; /* this lets me place the content over the canvas element */
-	top: 160px;  /* this lets me place the content over the canvas element */
-	left: 14px; /* this lets me place the content over the canvas element  */
-}
 
 
-	.boxy {
-		/*max-width: 150px;*/
-		margin: 40px 20px;
-		border: 3px solid #939097;
-		border-radius: 10px;
-		text-align: center;
-		padding: 30px 20px;
-		font-size: 1.2em;
-	}
+
+
+
+
+
 
 
 /******************************************
