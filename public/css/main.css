@@ -215,33 +215,34 @@ CENTER AREA - ALL PAGES EXCEPT HOME PAGE
 CENTER AREA - HOME PAGE ONLY
 ******************************************/
 
-.logo {
-	margin: 0 auto;
-	width: 400px;
-	padding-top: 1px;  /* to take care of collapsing vertical margins */
-	padding-bottom: 1px;  /* to take care of collapsing vertical margins */
-	padding-right: 16px;  /* to center text since font seems to be off-center */
-	text-align: center;
-	font-family: "acta-poster-swashes", sans-serif;
-	font-size: 5em;
-	color: #475865;  /* blue */
-}
-
-.headshot {
-	display: block;
-	margin: 0 auto 50px auto;
-	max-width: 200px;
-	text-align: center;
-	border-radius: 50%;	
-}
-
-.welcome-blurb {
+.container-logo-headshot,
+.welcome-blurb  {
 	margin: 0 auto;
 	background-color: #F7F8FA;  /* white with blue tint */
 	padding-left: 1em;  /* to give space from edges on smaller screens */
 	padding-right: 1em;  /* to give space from edges on smaller screens */
 	text-align: center;
 }
+
+	.logo {
+		margin: 0 auto;
+		width: 400px;
+		padding-top: 1px;  /* to take care of collapsing vertical margins */
+		padding-bottom: 1px;  /* to take care of collapsing vertical margins */
+		padding-right: 16px;  /* to center text since font seems to be off-center */
+		text-align: center;
+		font-family: "acta-poster-swashes", sans-serif;
+		font-size: 5em;
+		color: #475865;  /* blue */
+	}
+
+	.headshot {
+		display: block;
+		margin: 0 auto 50px auto;
+		max-width: 200px;
+		text-align: center;
+		border-radius: 50%;	
+	}
 
 	.welcome-blurb>p {
 		margin: 0;
@@ -261,11 +262,12 @@ FOOTER
 	background-color: #939097;
 	text-align: center;
 	padding-top: 10px;
-	padding-bottom: 50px;
+	padding-bottom: 20px;
+	font-size: 0.9em;
 }
 
 .contact-icons {
-	margin-bottom: 0.5em;
+	margin-bottom: 0;
 	padding: 0;
 }
 
@@ -392,6 +394,9 @@ FOOTER
 	  animation-name: fadeInDown;
 	}
 
+	.headshot {
+		margin-bottom: 50px;
+	}
 
 	.welcome-blurb {
 		padding-left: 2em;  /* to give space from animation */
@@ -406,8 +411,19 @@ FOOTER
 
 @media (min-width: 595px) {
 
+	/* header */
 	.nav-item>a {
 		padding: 10px 20px;
+	}
+
+	/* footer */
+	.footer {
+		font-size: 1em;
+	}
+
+	.footer-blurb {
+		max-width: 500px;
+		margin: 0 auto;
 	}
 
 	/*	BACKGROUND ANIMATION - HOME PAGE ONLY  */
@@ -428,10 +444,29 @@ FOOTER
 		width: 100%;
 	}
 
+	.container-logo-headshot {
+		width: 650px;
+		padding-top: 20px;  /* to give space from animation */
+	}
+
+		.logo {
+			display: inline-block;
+			vertical-align: bottom;
+			position: relative;
+			left: -65px;
+		}
+
+		.headshot {
+			display: inline-block;
+			margin-bottom: 0;
+			position: relative;
+			left: -20px;
+		}
+
 	.welcome-blurb {
 		max-width: 650px;
 		text-align: left;
-		padding-top: 20px;  /* to give space from animation */
+		padding-top: 10px;
 	}
 
 	.boxes-group {
@@ -454,15 +489,7 @@ FOOTER
 			
 		}
 
-	.footer-blurb {
-		max-width: 500px;
-		margin: 0 auto;
-	}
 
-	/* footer spans */
-	.line-break {
-		display: block;
-	}
 
 
 }  /* end media query for min-width: 595px */
