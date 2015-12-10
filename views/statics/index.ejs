@@ -5,65 +5,54 @@
 </canvas>
 
 
-<div class="topDivHome">
+<div class="full-home-page-overlay">
 
-	<% include ../partials/navbarTop %>
+	<% include ../partials/header-navbar %>
 
+	<div class="container-logo-headshot">
+		<h1 class=".tk-acta-poster-swashes logo">Hello...</h1>
+		<img src="img/lindsay_elia_smileyface.jpg" alt="picture of lindsay elia smiling" class="headshot">
+	</div>
 
-	<div class="aboutMeText">
+	<div class="welcome-blurb">
 
-		<div id="helloItsMe">
-			<h1 class=".tk-acta-poster-swashes">Hello...</h1>
-		
-			<img src="img/lindsay_elia_smileyface.jpg" alt="picture of lindsay elia smiling" class="headshot">
-		</div>
-		
-		<p class="introTextA">I'm Lindsay. Nice to meet you!</p>
+		<p>I'm Lindsay. Nice to meet you!</p>
 
-		<p class="introTextB">I really, really enjoy coding, designing, and developing web applications. :) I'm currently looking for work, so <a href="javascript:void(0);" onclick="showOrHide()">get in touch</a> and let's talk.</p>
+		<p>I really, really enjoy coding, designing, and developing web applications. :) I'm currently looking for work, so <a href="javascript:void(0);" onclick="showOrHide()">get in touch</a> and let's talk.</p>
 
-		<p class="introTextB">I have over 12 years of experience spanning technology, customer service, community building, project coordination, and design. I designed and built this site. Let me know how you like it!</p>
+		<p>I have over 12 years of experience spanning technology, customer service, community building, project coordination, and design. I designed and built this site. Let me know how you like it!</p>
 
 	</div>
 
 
-	<div class="columnOfBoxes">
+	<div class="boxes-group">
 
-		<a href="portfolio.html" class="darkLink">
+		<a href="/portfolio" class="dark-link">
 			<div class="boxy">
 				<i class="grid layout icon huge"></i>
 				<div>Portfolio</div>
 			</div>
 		</a>
 
-		<a href="resume.html" class="darkLink">
+		<a href="/resume" class="dark-link">
 			<div class="boxy">
 				<i class="idea icon huge"></i>
 				<div>Resume</div>
 			</div>
 		</a>
 
-		<a href="http://blog.lindsayelia.com/" class="darkLink">
+		<a href="/blog" class="dark-link">
 			<div class="boxy">
 				<i class="write icon huge"></i>
 				<div>Blog</div>
 			</div>
 		</a>
 
-		<!-- <a href="reading.html" class="darkLink">
-			<div class="boxy">
-				<i class="newspaper icon huge"></i>
-				<div>Reading</div>
-			</div>
-		</a> -->
+	</div> <!-- close <div class="boxes-group"> -->
 
-	</div> <!-- close <div id="columnOfBoxes"> -->
+</div> <!-- close <div class="full-home-page-background"> -->
 
 
 
-</div> <!-- close <div id="topDiv"> -->
-
-
-
-<% include ../partials/footerHome %>
+<% include ../partials/footer %>
 

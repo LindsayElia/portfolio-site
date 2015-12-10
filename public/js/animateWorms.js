@@ -28,7 +28,7 @@ function DrawWorm(){
 
 // >>>>>>>>>>>>>>>>
 // update depending on final size of layout & also below, line 57
-		height = window.outerHeight * 1.75; // window.innerHeight - multiply by ?? if needed
+		height = window.outerHeight * 1.5; // window.innerHeight - multiply by ?? if needed
 										// larger number means more white space, below the footer potentially
 		canvas.width = width;
 		canvas.height = height;
@@ -54,7 +54,7 @@ function DrawWorm(){
 
 // >>>>>>>>>>>>>>>>
 // update depending on final size of layout
-		canvas.height = window.outerHeight * 1.75;  // - multiply by ?? if needed
+		canvas.height = window.outerHeight * 1.5;  // - multiply by ?? if needed
 	}
 
 	var Draw = function(){

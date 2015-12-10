@@ -23,7 +23,7 @@ COLOR PALETTE
 ***************************** TO FIX *****************************
 Remove colors not being used
 
-white - blue tint
+white with blue tint
 #F7F8FA
 rgb(247,248,250)
 
@@ -60,310 +60,45 @@ for navbar text, on top of yellow background
 
 */
 
-/******************************************
-ANIMATIONS - FROM http://daneden.me/animate
-******************************************/
-
-/*!
-Animate.css - http://daneden.me/animate
-Licensed under the MIT license - http://opensource.org/licenses/MIT
-
-Copyright (c) 2015 Daniel Eden
-*/
-
-@charset "UTF-8";
-
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-}
 
 
-/******************************************
-GENERAL
-******************************************/
+/************************************************************************************
+									BASE STYLES
+************************************************************************************/
 
-/* Would like to add this in but need to adjust navbar to do so */
-/** {
+* {
 	box-sizing: border-box;
-}*/
+}
 
 body {
-	/*font-family: 'Railway', sans-serif;*/
-	/*font-family: "Lato",sans-serif;*/
 	font-family: "Avenir Next","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 1em;
 	background-color: #F7F8FA;
-	/*color: #454544;*/
 }
 
-
-/******************************************
-BACKGROUND ANIMATION
-******************************************/
-
-#canvas { 
-	margin: 0px;
-	background: rgb(247,248,250);
+.clearfix {
+	display: inline-block;
 }
 
-
-/******************************************
-NAVBAR
-******************************************/
-
-/* index page only */
-.topDivHome {
-	opacity: 0.9; /* this lets animation work, albiet clunkily, behind it */
-	height: 70px;
-	background-color: #D6CC4E;
-	position: absolute;  /* this lets me place the navbar over the canvas element */
-	top: 0;  /* this lets me place the navbar over the canvas element */
-	left: 0;  /* this lets me place the navbar over the canvas element */
-	margin: 0 auto;
-	width: 100%;
-	border-bottom: 10px solid #939097;
+.clearfix::after {
+    content: “ ”;
+    display: table;
+    clear: both;
 }
 
-.topDiv {
-	opacity: 0.9; /* this lets animation work, albiet clunkily, behind it */
-	height: 70px;
-	background-color: #D6CC4E;
-	position: absolute;  /* this lets me place the navbar over the canvas element */
-	top: 0;  /* this lets me place the navbar over the canvas element */
-	left: 0;  /* this lets me place the navbar over the canvas element */
-	margin: 0 auto;
-	width: 100%;
-	border-bottom: 10px solid #939097;
-}
-
-#navbarCentered {
-	margin: 0 auto;
-	max-width: 565px;
-	/*height: 65px;*/
-	/*background-color: blue;*/
-	padding-top: 5px;
-}
-
-#navbarCentered>span {
-	float: left;
-	padding: 30px 20px 0 20px;
-	font-size: 1.2em;
-}
-
-#navbarCentered>span>a {
-	color: #454544;
-}
-
-#navbarCentered>span>a:hover {
-	color: #F7F8FA;
-}
-
-#navbarCentered>span.currentPage {
-	border-bottom: 10px solid #475865;  /* dark blue */
-	padding-bottom: 8px;
-}
-
-
-
-
-
-/******************************************
-CENTER AREA
-******************************************/
-
-.aboutMeText {
-	max-width: 550px;
-	background-color: #F7F8FA;
-	margin: 0 auto;
-	padding: 0 50px;
-	position: relative; /* this lets me place the content over the canvas element */
-	top: 180px;  /* this lets me place the content over the canvas element */
-	left: 14px;  /* this lets me place the content over the canvas element */ 
-}
-
-#helloItsMe>h1 {
-	/*font-family: "angie-sans",sans-serif;*/
-	font-family: "acta-poster-swashes", sans-serif;
-	font-size: 5em;
-	position: relative;
-	left: -146px;
-	/*top: 20px;*/
-	line-height: 1;
-	margin-bottom: 50px;
-	display: inline;
-	color: #475865;  /* blue */
-}
-
-.headshot {
-	border-radius: 50%;
-	/*float: right;*/
-	position: absolute;
-	left: 400px;
-	top: -60px;
-	display: inline;
-}
-
-.introTextA {
-	max-width: 550px;
-	background-color: #F7F8FA;
-	margin: 0;
-	padding: 40px 0 20px 0;
-}
-
-.introTextB {
-	max-width: 550px;
-	background-color: #F7F8FA;
-	margin: 0;
-	padding: 0 0 20px 0;
-}
-
-
-.columnOfBoxes {
-	max-width: 240px;
-	background-color: #F7F8FA;
-	margin: 0 auto;
-	padding: 20px;
-	position: relative; /* this lets me place the content over the canvas element */
-	top: 160px;  /* this lets me place the content over the canvas element */
-	left: 14px; /* this lets me place the content over the canvas element  */
-}
-
-
-.boxy {
-	/*max-width: 150px;*/
-	margin: 40px 20px;
-	border: 3px solid #939097;
-	border-radius: 10px;
-	text-align: center;
-	padding: 30px 20px;
-	font-size: 1.2em;
-}
-
-
-
-/* not on index page */
-.main-content-not-home-page {
-	margin-top: 150px;
-	/*margin-left: 200px;*/
-}
-
-
-
-/******************************************
-FOOTER
-******************************************/
-
-#footerDiv {
-	opacity: 0.9;  /* this lets animation work, albiet clunkily, behind it */
-	background-color: #939097;
-	height: 200px;
-	clear: both;
-	position: absolute; /* this lets me place the content over the canvas element */
-	top: 1400px; /* this lets me place the content over the canvas element */
-	left: 0;
-	width: 100%;
-}
-
-
-/* portfolio page only */
-#footerDiv-not-home-page {
-	opacity: 0.9;  
-	background-color: #939097;
-	height: 200px;
-	top: 3200px;		/* This is the only difference - should be refactored. */
-	left: 0;
-	width: 100%;
-}
-
-/* change icon alignment to be centered on smaller screen sizes */
-.contactIcons {
-	position: absolute;
-	right: 0;
-}
-
-.contactIcons>li {
-	list-style: none;
-	float: left;
-	padding: 0 10px;
-	margin-top: 10px;
-	/*background-color: purple;*/
-}
-
-
-.footerBlurb {
-	position: absolute;
-	right: 0;
-	clear: both;
-	margin-top: 80px;
-	text-align: right;
-	padding-right: 18px;
-	/*background-color: blue;*/
-}
-
-.paragraph-footer {
-	line-height: .5;	
-}
-
-#footerNavbar {
-	position: absolute;
-	right: 0;
-	margin-top: 160px;
-	padding-right: 18px;
-}
-
-#footerNavbar>li {
-	float: left;
-	list-style: none;
-	padding-left: 25px;
-}
 
 /******************************************
 ICONS
 ******************************************/
 
 .boxy>.icon {
-	color: #475865; 
-	/* dark blue */
+	color: #475865;  /* dark blue */
+	margin: 0;
 }
 
-.contactIcons>.icon, .footerBlurb>p>.icon {
-	color: #D6CC4E;
+.contact-icons>.icon {
+	color: #D6CC4E;  /* pea green / mellow yellow */
+	margin: 0;
 }
 
 i.icon {
@@ -371,22 +106,12 @@ i.icon {
 }
 
 /******************************************
-LINKS
+LINKS - ALL PAGES
 ******************************************/
 
 a {
-	color: #D6CC4E;
+	color: #D6CC4E;  /* pea green / mellow yellow */
 	text-decoration: none;
-	/*font-weight: 500;*/
-}
-
-a.darkLink {
-	color: black;
-}
-
-a:hover>.boxy{
-	background-color: #D6CC4E;
-
 }
 
 a:hover {
@@ -394,9 +119,394 @@ a:hover {
 	background-color: #939097;
 }
 
-#footerDiv>a:hover {
+.footer>a:hover {
 	color: #F7F8FA;
 }
+
+/******************************************
+LINKS - HOME PAGE
+******************************************/
+
+a.dark-link {
+	color: black;
+}
+
+a:hover>.boxy{
+	background-color: #D6CC4E;  /* pea green / mellow yellow */
+}
+
+
+/******************************************
+BACKGROUND ANIMATION - HOME PAGE ONLY
+******************************************/
+
+#canvas { 
+	display: none;
+}
+
+
+/************************************************************************************
+									LAYOUT
+************************************************************************************/
+
+
+
+/******************************************
+HEADER & NAVBAR
+******************************************/
+
+.container-main-all-outer {
+	position: relative;  /* need to give a position: relative so we can give canvas child element a position: absolute */
+}
+
+.container-header-outer {
+	background-color: #D6CC4E;  /* pea green / mellow yellow */
+	border-bottom: 20px solid #939097;  /* gray */
+	margin-bottom: 50px;
+}
+
+.container-header-inner {
+	padding-top: 35px;
+	text-align: center;
+}
+
+	.nav-container {
+		padding: 0;
+		margin: 0;
+	}
+
+	.nav-item {
+		font-size: 1.2em;
+		list-style: none;
+		border-bottom: 2px solid #939097;  /* mid-gray */
+	}
+
+	.nav-item>a {
+		padding-top: 8px;
+		padding-bottom: 2px;
+		color: #454544; /* dark-gray */
+		display: block;
+	}
+
+	.nav-item>a:hover {
+		color: #F7F8FA; 
+	}
+
+	.current-page {
+		border-bottom: 2px solid #475865;  /* dark blue */
+		font-weight: bold;
+	}
+
+	.current-page>a {
+		color: #475865;  /* dark blue */
+	}
+
+
+/******************************************
+CENTER AREA - ALL PAGES EXCEPT HOME PAGE
+******************************************/
+
+.main-content {
+	/* no rules yet */
+}
+
+
+/******************************************
+CENTER AREA - HOME PAGE ONLY
+******************************************/
+
+.container-logo-headshot,
+.welcome-blurb  {
+	margin: 0 auto;
+	background-color: #F7F8FA;  /* white with blue tint */
+	padding-left: 1em;  /* to give space from edges on smaller screens */
+	padding-right: 1em;  /* to give space from edges on smaller screens */
+	text-align: center;
+}
+
+	.logo {
+		margin: 0 auto;
+		width: 400px;
+		padding-top: 1px;  /* to take care of collapsing vertical margins */
+		padding-bottom: 1px;  /* to take care of collapsing vertical margins */
+		padding-right: 16px;  /* to center text since font seems to be off-center */
+		text-align: center;
+		font-family: "acta-poster-swashes", sans-serif;
+		font-size: 5em;
+		color: #475865;  /* blue */
+	}
+
+	.headshot {
+		display: block;
+		margin: 0 auto 50px auto;
+		max-width: 200px;
+		text-align: center;
+		border-radius: 50%;	
+	}
+
+.welcome-blurb {
+	padding-bottom: 50px;
+}
+
+	.welcome-blurb>p {
+		margin: 0;
+		padding: 0 0 20px 0;
+	}
+
+.boxes-group {
+	display: none;
+}
+
+
+/******************************************
+FOOTER
+******************************************/
+
+.footer {
+	background-color: #939097;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	font-size: 0.9em;
+}
+
+.contact-icons {
+	margin-bottom: 0;
+	padding: 0;
+}
+
+	.contact-icons>li {
+		list-style: none;
+		float: left;
+		padding: 0 10px;
+	}
+
+.footer-blurb {
+	padding-left: 3em;
+	padding-right: 3em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+	.footer-blurb>p {
+		padding: 0;
+		margin: 0;
+	}
+
+.footer-navbar {
+	margin-bottom: 0.5em;
+	padding: 0;
+}
+
+	.footer-navbar>li {
+		list-style: none;
+		float: left;
+		padding: 0 10px;
+	}
+
+
+
+
+/************************************************************************************
+									MEDIA QUERIES
+************************************************************************************/
+
+@media (min-width: 499px) {
+
+	.container-header-outer {
+		border-bottom: 10px solid #939097; /* gray */
+	}
+	
+	.container-header-inner {
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	.nav-item {
+		display: inline-block;
+		border-bottom: none;
+		font-weight: normal;
+	}
+
+	.nav-item>a {
+		padding: 10px 10px;
+		margin-left: -4px;
+		display: block;
+	}
+
+	.current-page {
+		border-bottom: 10px solid #475865;  /* dark blue */
+		margin-bottom: -10px;
+		margin-left: -4px;
+		font-weight: normal;
+	}
+
+	.current-page>a {
+		color: #454544; /* dark-gray */
+		margin-left: 0;
+	}
+
+
+	/******************************************
+	ANIMATIONS - FROM http://daneden.me/animate
+	******************************************/
+	/*!
+	Animate.css - http://daneden.me/animate
+	Licensed under the MIT license - http://opensource.org/licenses/MIT
+	Copyright (c) 2015 Daniel Eden
+	*/
+
+	@charset "UTF-8";
+
+	.animated {
+	  -webkit-animation-duration: 1s;
+	  animation-duration: 1s;
+	  -webkit-animation-fill-mode: both;
+	  animation-fill-mode: both;
+	}
+
+	@-webkit-keyframes fadeInDown {
+	  from {
+	    opacity: 0;
+	    -webkit-transform: translate3d(0, -100%, 0);
+	    transform: translate3d(0, -100%, 0);
+	  }
+
+	  to {
+	    opacity: 1;
+	    -webkit-transform: none;
+	    transform: none;
+	  }
+	}
+
+	@keyframes fadeInDown {
+	  from {
+	    opacity: 0;
+	    -webkit-transform: translate3d(0, -100%, 0);
+	    transform: translate3d(0, -100%, 0);
+	  }
+
+	  to {
+	    opacity: 1;
+	    -webkit-transform: none;
+	    transform: none;
+	  }
+	}
+
+	.fadeInDown {
+	  -webkit-animation-name: fadeInDown;
+	  animation-name: fadeInDown;
+	}
+
+	.headshot {
+		margin-bottom: 50px;
+	}
+
+	.welcome-blurb {
+		padding-left: 2em;  /* to give space from animation */
+		padding-right: 2em;  /* to give space from animation */
+	}
+
+
+
+
+}  /* end media query for min-width: 499px */
+
+
+@media (min-width: 595px) {
+
+	/* header */
+	.nav-item>a {
+		padding: 10px 20px;
+	}
+
+	/* footer */
+	.footer {
+		font-size: 1em;
+	}
+
+	.footer-blurb {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+	/*	BACKGROUND ANIMATION - HOME PAGE ONLY  */
+	#canvas {
+		display: inline-block;  /* make visible; this was the default display type */
+		vertical-align: top;
+		margin: 0px;
+		background: rgb(247,248,250);  /* white with blue tint */
+	}
+
+	/*	TO GO WITH BACKGROUND ANIMATION - HOME PAGE ONLY  */
+	.full-home-page-overlay {
+		opacity: 1; /* this overlays all of the home page content on top of the canvas, and lets us see the canvas behind it */
+		height: 1px; /* needs a height or else it doesn't display the canvas behind it */
+		position: absolute;  /* this is absolutely positioned relative to its parent element */
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	.container-logo-headshot {
+		width: 650px;
+		padding-top: 20px;  /* to give space from animation */
+	}
+
+		.logo {
+			display: inline-block;
+			vertical-align: bottom;
+			position: relative;
+			left: -65px;
+		}
+
+		.headshot {
+			display: inline-block;
+			margin-bottom: 0;
+			position: relative;
+			left: -20px;
+		}
+
+	.welcome-blurb {
+		max-width: 650px;
+		text-align: left;
+		padding-top: 10px;
+		padding-bottom: 0;
+	}
+
+	.boxes-group {
+		display: block; /* make visible */
+		width: 240px;
+		background-color: #F7F8FA;
+		margin: 0.5em auto;
+		padding: 1px 1em;  /* top/bottom are to take care of collapsing vertical margins,
+		left/right are to give space from the animation behind & keep box a square shape */
+		text-align: center;
+		font-size: 1.2em;
+	}
+
+		.boxy {
+			/*max-width: 150px;*/
+			margin: 40px 20px;
+			border: 3px solid #939097;
+			border-radius: 10px;
+			padding: 30px 20px;
+			
+		}
+
+
+
+
+}  /* end media query for min-width: 595px */
+
+
+
+
+
+
+
+
+
 
 
 
@@ -547,6 +657,8 @@ PORTFOLIO PAGE
 .portfolio-image-wrapper {
 	text-align: center;
 }
+
+
 
 
 

@@ -1,21 +1,33 @@
-	<div id="footerDiv-not-home-page">
+</div> <!-- close div class="container-main-all-outer" from header -->
 
-		<ul class="contactIcons">
+	<div class="footer">
+
+		<ul class="contact-icons clearfix">
 			<li><a href="mailto:<%= email %>">										<i class="mail icon big">				</i></a></li>
 			<li><a href="javascript:void(0);" onclick="showOrHide()">				<i class="send icon big">				</i></a></li>
 			<li><a href="https://www.linkedin.com/in/lindsayelia" target="blank">	<i class="linkedin square icon big">	</i></a></li>
 			<li><a href="https://github.com/LindsayElia" target="blank">			<i class="github icon big">				</i></a></li>
+		</ul>
+		<ul class="contact-icons clearfix">
 			<li><a href="http://codepen.io/sflinz/" target="blank">					<i class="codepen icon big">			</i></a></li>
 			<li><a href="https://twitter.com/USFlin" target="blank">				<i class="twitter icon big">			</i></a></li>
 			<li><a href="https://www.pinterest.com/usflin/" target="blank">			<i class="pinterest icon big">			</i></a></li>
 		</ul>
 
-		<div class="footerBlurb">
-			<p>Site design and construction by Lindsay Elia - San Francisco, CA - 2015.</p>
+		<div class="footer-blurb">
 			
+			<p>Site design and construction by Lindsay Elia.
+			<p>San Francisco, CA &copy; 2015</p>
+
+			<!-- display this on home page only -->
+			<% if (path === "/index"){ %>
+				<p>The curlicue animation effect on this page is attributed to <a href="http://codepen.io/tholman/pen/EpfLs/" target="blank">Tim Holman's Codepen</a>.
+				</p>
+			<% } %>
+
 		</div>
 
-		<ul id="footerNavbar">
+		<ul class="footer-navbar clearfix">
 			<li><a href="/index">		Home		</a></li>
 			<li><a href="/portfolio">	Portfolio	</a></li>
 			<li><a href="/resume">		Resume		</a></li>
@@ -25,7 +37,7 @@
 	</div> <!-- close <div id="footerDiv"> -->
 
 
-<% include ../partials/olarkSnippet %>
+<% include ../partials/olark-snippet %>
 
 
 </body>
