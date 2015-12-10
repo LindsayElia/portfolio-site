@@ -244,6 +244,10 @@ CENTER AREA - HOME PAGE ONLY
 		border-radius: 50%;	
 	}
 
+.welcome-blurb {
+	padding-bottom: 50px;
+}
+
 	.welcome-blurb>p {
 		margin: 0;
 		padding: 0 0 20px 0;
@@ -467,6 +471,7 @@ FOOTER
 		max-width: 650px;
 		text-align: left;
 		padding-top: 10px;
+		padding-bottom: 0;
 	}
 
 	.boxes-group {
