@@ -516,7 +516,7 @@ RESUME PAGE
 
 .timeline-summary-section {
 	margin: 0 auto;
-	padding: 100px 5% 25px 5%;
+	padding-bottom: 25px;
 	text-align: center;
 	max-width: 570px;
 }
@@ -540,7 +540,7 @@ RESUME PAGE
 	position: absolute;
 	left: 50%;
 	margin-left: -5px;
-	height: 250%;			/* TO FIX:;
+	height: 80%;			/* TO FIX:;
 							I doubled this so it would extend - not sure why it's not same height as element appears to me */
 							/* breaks when screen is made smaller - to fix later */
 							/* pushes bottom part of page out further - adds white space / moves away from bottom of page */
@@ -607,6 +607,10 @@ RESUME PAGE
 	left: 41.5%;		/* TO FIX: this is not centered with summary section because 
 						it's nested in more divs with more margins, etc than the summary section has */
 }
+
+
+
+
 
 
 
