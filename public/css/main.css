@@ -86,6 +86,13 @@ body {
     clear: both;
 }
 
+h1, 
+h2,
+h3 {
+	font-weight: normal;
+	margin: 0;
+}
+
 
 /******************************************
 ICONS
@@ -206,10 +213,11 @@ HEADER & NAVBAR
 CENTER AREA - ALL PAGES EXCEPT HOME PAGE
 ******************************************/
 
-.main-content {
-	width: 80%;
+.container-main-content {
 	margin: 0 auto;
 	padding-bottom: 50px;
+	padding-left: 1em;
+	padding-right: 1em;
 	min-height: calc(100vh - 490px);  /* to create a sticky footer */
 }
 
@@ -236,7 +244,7 @@ CENTER AREA - HOME PAGE ONLY
 		text-align: center;
 		font-family: "acta-poster-swashes", sans-serif;
 		font-size: 5em;
-		color: #475865;  /* blue */
+		color: #475865;  /* dark blue */
 	}
 
 	.headshot {
@@ -310,13 +318,45 @@ FOOTER
 
 
 
+/******************************************
+PORTFOLIO PAGE
+******************************************/
+
+.container-project-group {
+	border-top: 3px solid #475865;   /* dark blue */
+}
+
+	.column-one {
+		float: left;
+		width: 50%;
+		padding: 2em;
+	}
+
+	.column-two {
+		float: right;
+		width: 50%;
+		padding: 2em;
+	}
+
+	.portfolio-image {
+		border: 1px solid gray;
+		max-width: 100%;
+	}
+
+
+
+
+
+
+
+
 /************************************************************************************
 									MEDIA QUERIES
 ************************************************************************************/
 
 @media (min-width: 425px) {
 
-	.main-content {
+	.container-main-content {
 		min-height: calc(100vh - 445px);  /* to create a sticky footer */
 	}
 
@@ -409,7 +449,7 @@ FOOTER
 	  animation-name: fadeInDown;
 	}
 
-	.main-content {
+	.container-main-content {
 		min-height: calc(100vh - 330px);  /* to create a sticky footer */
 	}
 
@@ -423,9 +463,8 @@ FOOTER
 	}
 
 
-
-
 }  /* end media query for min-width: 499px */
+
 
 
 @media (min-width: 595px) {
@@ -509,8 +548,9 @@ FOOTER
 			
 		}
 
-	.main-content {
+	.container-main-content {
 		min-height: calc(100vh - 350px);  /* to create a sticky footer */
+		max-width: 1000px;
 	}
 
 
@@ -547,7 +587,7 @@ RESUME PAGE
 
 
 .resume-content-container-outer {
-	background-color: #475865;  /* blue */
+	background-color: #475865;  /* dark blue */
 	/*margin-bottom: 200px;*/
 }
 
@@ -618,7 +658,7 @@ RESUME PAGE
 	text-align: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color: #475865;  /* blue */
+	background-color: #475865;  /* dark blue */
 	width: 220px;
 	position: relative;
 	left: 41.5%;		/* TO FIX: this is not centered with summary section because 
@@ -631,53 +671,7 @@ RESUME PAGE
 
 
 
-/******************************************
-PORTFOLIO PAGE
-******************************************/
 
-/* h1 & h2 */
-.portfolio-header {
-	/*font-family: 'Railway', sans-serif;*/
-	/*font-family: "Lato",sans-serif;*/
-	font-weight: normal;
-	text-align: center;	
-}
-
-.portfolio-header-inline {
-	display: inline;
-	margin: auto 25px;
-}
-
-.portfolio-sub-heading {
-	text-align: center;
-}
-
-.project-container {
-	width: 90%;
-	margin: 0 auto;
-	max-width: 800px;
-	margin-bottom: 100px;
-}
-
-.portfolio-underline {
-	border-bottom: 3px solid #475865;   /* blue */
-	/*height: 2px;*/
-	/*background: radial-gradient(#475865, #F7F8FA);  /* blue, white */
-}
-
-.project-description {
-	width: 80%;
-	margin: 0 auto;
-}
-
-
-.portfolio-image {
-	border: 1px solid gray;
-}
-
-.portfolio-image-wrapper {
-	text-align: center;
-}
 
 
 
