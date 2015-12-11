@@ -27,7 +27,7 @@ white with blue tint
 #F7F8FA
 rgb(247,248,250)
 
-mid-gray, purple tone
+gray
 #939097
 
 black
@@ -123,7 +123,7 @@ a {
 
 a:hover {
 	color: #F7F8FA;
-	background-color: #939097;
+	background-color: #939097;  /* gray */
 }
 
 .footer>a:hover {
@@ -216,9 +216,13 @@ CENTER AREA - ALL PAGES EXCEPT HOME PAGE
 .container-main-content {
 	margin: 0 auto;
 	padding-bottom: 50px;
+	min-height: calc(100vh - 490px);  /* to create a sticky footer */
+}
+
+/*using on eror page*/
+.container-main-content-inner {
 	padding-left: 1em;
 	padding-right: 1em;
-	min-height: calc(100vh - 490px);  /* to create a sticky footer */
 }
 
 
@@ -274,7 +278,7 @@ FOOTER
 ******************************************/
 
 .footer {
-	background-color: #939097;
+	background-color: #939097;  /* gray */
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 20px;
@@ -323,19 +327,18 @@ PORTFOLIO PAGE
 ******************************************/
 
 .container-project-group {
-	border-top: 3px solid #475865;   /* dark blue */
+	border-top: 1px solid #939097;  /* gray */
+	text-align: center;
+	padding-top: 1em;
 }
 
-	.column-one {
-		float: left;
-		width: 50%;
-		padding: 2em;
-	}
-
+	.column-one,
 	.column-two {
-		float: right;
-		width: 50%;
-		padding: 2em;
+		display: inline-block;
+		margin: 0 auto;
+		max-width: 600px;
+		padding: 1em;
+		text-align: left;
 	}
 
 	.portfolio-image {
@@ -542,7 +545,7 @@ PORTFOLIO PAGE
 		.boxy {
 			/*max-width: 150px;*/
 			margin: 40px 20px;
-			border: 3px solid #939097;
+			border: 3px solid #939097;  /* gray */
 			border-radius: 10px;
 			padding: 30px 20px;
 			
@@ -558,6 +561,24 @@ PORTFOLIO PAGE
 
 
 
+@media (min-width: 800px) {
+
+	/* PORTFOLIO */
+	.column-one {
+		float: left;
+		width: 50%;
+		padding: 2em;
+		padding-right: 1.5em;
+	}
+
+	.column-two {
+		float: right;
+		width: 50%;
+		padding: 2em;
+		padding-left: 1.5em;
+	}
+
+}
 
 
 
