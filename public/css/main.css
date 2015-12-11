@@ -207,7 +207,10 @@ CENTER AREA - ALL PAGES EXCEPT HOME PAGE
 ******************************************/
 
 .main-content {
-	/* no rules yet */
+	width: 80%;
+	margin: 0 auto;
+	padding-bottom: 50px;
+	min-height: calc(100vh - 490px);  /* to create a sticky footer */
 }
 
 
@@ -311,6 +314,14 @@ FOOTER
 									MEDIA QUERIES
 ************************************************************************************/
 
+@media (min-width: 425px) {
+
+	.main-content {
+		min-height: calc(100vh - 445px);  /* to create a sticky footer */
+	}
+
+}
+
 @media (min-width: 499px) {
 
 	.container-header-outer {
@@ -396,6 +407,10 @@ FOOTER
 	.fadeInDown {
 	  -webkit-animation-name: fadeInDown;
 	  animation-name: fadeInDown;
+	}
+
+	.main-content {
+		min-height: calc(100vh - 330px);  /* to create a sticky footer */
 	}
 
 	.headshot {
@@ -494,7 +509,9 @@ FOOTER
 			
 		}
 
-
+	.main-content {
+		min-height: calc(100vh - 350px);  /* to create a sticky footer */
+	}
 
 
 }  /* end media query for min-width: 595px */
