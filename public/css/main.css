@@ -331,15 +331,8 @@ PORTFOLIO PAGE
 .container-project-group {
 	text-align: center;
 	padding-top: 1em;
-	border-top: 1px solid #939097;   /*gray*/ 
-	/*border-top: 1px solid #475865;  /* dark blue */
-	/*background-image: linear-gradient(#475865 0%, #F7F8FA 4%, #F7F8FA 100%);*/
-	  /* white with blue tint */
-	box-shadow: inset 0 9px 10px -10px rgba(147,144,151, .9);
-	}
-
-	.container-project-group:before {
-		
+	border-top: 0.5px solid #939097;   /*gray*/ 
+	box-shadow: inset 0 9px 10px -11px rgba(147,144,151, .8);  /*gray*/ 
 	}
 
 	.column-one,
