@@ -29,6 +29,7 @@ rgb(247,248,250)
 
 gray
 #939097
+rgb(147,144,151)
 
 black
 #000000
@@ -44,6 +45,7 @@ teal
 
 dark blue
 #475865
+rgd(71,68,101)
 
 
 lighter gray for readability
@@ -73,7 +75,7 @@ for navbar text, on top of yellow background
 body {
 	font-family: "Avenir Next","Avenir","Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 1em;
-	background-color: #F7F8FA;
+	background-color: #F7F8FA;  /* white with blue tint */
 }
 
 .clearfix {
@@ -327,10 +329,18 @@ PORTFOLIO PAGE
 ******************************************/
 
 .container-project-group {
-	border-top: 1px solid #939097;  /* gray */
 	text-align: center;
 	padding-top: 1em;
-}
+	border-top: 1px solid #939097;   /*gray*/ 
+	/*border-top: 1px solid #475865;  /* dark blue */
+	/*background-image: linear-gradient(#475865 0%, #F7F8FA 4%, #F7F8FA 100%);*/
+	  /* white with blue tint */
+	box-shadow: inset 0 9px 10px -10px rgba(147,144,151, .9);
+	}
+
+	.container-project-group:before {
+		
+	}
 
 	.column-one,
 	.column-two {
