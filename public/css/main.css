@@ -360,6 +360,13 @@ PORTFOLIO PAGE
 									MEDIA QUERIES
 ************************************************************************************/
 
+/* For IE support */
+@-ms-viewport{
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
+
 @media (min-width: 425px) {
 
 	.container-main-content {
