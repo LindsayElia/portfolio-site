@@ -505,30 +505,6 @@ PORTFOLIO PAGE
 		margin: 0 auto;
 	}
 
-	/*	BACKGROUND ANIMATION - HOME PAGE ONLY  */
-	#canvas {
-		display: inline-block;  /* make visible; this was the default display type */
-		vertical-align: top;
-		margin: 0px;
-		background: rgb(247,248,250);  /* white with blue tint */
-	}
-
-	/*	TO GO WITH BACKGROUND ANIMATION - HOME PAGE ONLY  */
-	.full-home-page-overlay {
-		min-height: 1px; /* needs a height or else it doesn't display the canvas behind it */
-		position: absolute;  /* this is absolutely positioned relative to its parent element */
-		top: 0;
-		left: 0;
-		width: 100%;
-		pointer-events: none; /* This lets the mouseover events skip over this element and affect
-		the canvas element instead */
-	}
-
-		.full-home-page-overlay * {
-			pointer-events: all;  /* We need all the child elements of this div to be affected 
-			by mouse events, such as links, so they work */
-		}
-
 	.container-logo-headshot {
 		width: 650px;
 		padding-top: 20px;  /* to give space from animation */
@@ -585,7 +561,37 @@ PORTFOLIO PAGE
 
 
 
-@media (min-width: 800px) {
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+/* http://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile */
+@media (min-width: 801px) {
+
+
+	/* display canvas in larger views only;
+	it seems to break the page on mobile phones in landscape */
+
+	/*	BACKGROUND ANIMATION - HOME PAGE ONLY  */
+	#canvas {
+		display: inline-block;  /* make visible; this was the default display type */
+		vertical-align: top;
+		margin: 0px;
+		background: rgb(247,248,250);  /* white with blue tint */
+	}
+
+		/*	TO GO WITH BACKGROUND ANIMATION - HOME PAGE ONLY  */
+		.full-home-page-overlay {
+			min-height: 1px; /* needs a height or else it doesn't display the canvas behind it */
+			position: absolute;  /* this is absolutely positioned relative to its parent element */
+			top: 0;
+			left: 0;
+			width: 100%;
+			pointer-events: none; /* This lets the mouseover events skip over this element and affect
+			the canvas element instead */
+		}
+
+			.full-home-page-overlay * {
+				pointer-events: all;  /* We need all the child elements of this div to be affected 
+				by mouse events, such as links, so they work */
+			}
 
 	/* PORTFOLIO */
 	.column-one {
@@ -595,12 +601,12 @@ PORTFOLIO PAGE
 		padding-right: 1.5em;
 	}
 
-	.column-two {
-		float: right;
-		width: 50%;
-		padding: 2em;
-		padding-left: 1.5em;
-	}
+		.column-two {
+			float: right;
+			width: 50%;
+			padding: 2em;
+			padding-left: 1.5em;
+		}
 
 }
 

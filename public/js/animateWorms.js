@@ -283,7 +283,7 @@ function DrawWorm(){
 			
 }
 
-// BRINGING IN MATRIX 2D LIBRARY IN HEADER OR FOOTER, NOT IN PUBIC JS FOLDER
+// BRINGING IN MATRIX 2D LIBRARY FROM matrix.js file
  
 
 var app, interval, count;
