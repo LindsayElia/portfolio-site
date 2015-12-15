@@ -1,6 +1,9 @@
+console.log("file animate-worms.js is loaded");
+
 // Forked from [Tim Holman](http://codepen.io/tholman/)'s Pen 
 // [Draw worm](http://codepen.io/tholman/pen/EpfLs/)
 
+// I ADDED THIS
 $.getDocHeight = function(){
     return Math.max(
         $(document).height(),
@@ -9,11 +12,12 @@ $.getDocHeight = function(){
         document.documentElement.clientHeight
     );
 };
- 
+
+// I ADDED THIS
 var pageHeight = $.getDocHeight();
 var pageWidth = $(document).width();
-console.log("page height : ", pageHeight);
-console.log("page width : ", pageWidth);
+// console.log("page height : ", pageHeight);
+// console.log("page width : ", pageWidth);
 
 
 // DRAW ANIMATION ON MOUSEOVER
@@ -25,8 +29,6 @@ function DrawWorm(){
 	var height;
 
 	// starting position for animation
-	// var mouse = {x: 0, y: 0};
-	// var mouse = {x: window.innerWidth/2, y: window.innerHeight};
 	var mouse = {x: 10, y: window.innerHeight/2};
 	console.log("VAR mouse - ", mouse);
 
@@ -40,28 +42,13 @@ function DrawWorm(){
 	var N = 80;
 	
 	var px = window.innerWidth/2;
-	// var px = document.documentElement.clientWidth;
-	// var px = pageWidth;
-
 	var py = window.innerHeight;
-	// var py = window.outerHeight; // these seem to work okay with a number, like 500, also?
-	// var py = pageHeight;
 
 	this.initialize = function(){
 		canvas  = document.getElementById("canvas");
 		context = canvas.getContext('2d');
-		// CHANGE BACK?
-		// width = document.documentElement.clientWidth;  // width of the DOM ONLY, used to be window.innerWidth, but that added a scrollbar
-		// width = window.innerWidth;
-		width = pageWidth;
 
-		// CHANGE BACK?
-		// >>>>>>>>>>>>>>>>
-		// update depending on final size of layout & also below, line 57
-		// height = window.outerHeight * 1.5; // used to be window.innerHeight
-										// multiply by ?? if needed
-										// larger number means more white space, below the footer potentially
-		// height = window.innerHeight * 2;
+		width = pageWidth;
 		height = pageHeight;
 
 		canvas.width = width;
@@ -74,7 +61,6 @@ function DrawWorm(){
 		var interval = setInterval(Draw, 20);
 
 		// I ADDED THIS
-		// trying out some resize code...
 		// this resizes the canvas if the window is resized
 		window.addEventListener('resize', doTheResize, false);
 	};
@@ -82,18 +68,10 @@ function DrawWorm(){
 	// trying out some resize code...
 	// this resizes the canvas if the window is resized
 	function doTheResize(){
-		// canvas.width = document.documentElement.clientWidth;
-		// canvas.width = window.innerWidth;
 		canvas.width = $(document).width();
-		console.log("new width: ", canvas.width);
-
-		// >>>>>>>>>>>>>>>>
-		// update depending on final size of layout
-		// canvas.height = window.outerHeight * 1.5;  // - multiply by ?? if needed
-		// canvas.height = window.innerHeight * 2;
+		// console.log("new width: ", canvas.width);
 		canvas.height = $.getDocHeight();
-		console.log("new height: ", canvas.height);
-
+		// console.log("new height: ", canvas.height);
 	}
 
 	var Draw = function(){
@@ -116,8 +94,8 @@ function DrawWorm(){
 		Check();
 	};
 	
-	// CHANGE - GIVE NEW FUNCTION NAME ONCE I FIGURE OUT WHERE IT'S USED
-	//Takes a worm (obj) param
+	// CHANGE? - Not sure why the function name is a duplicate?
+	// Takes a worm (obj) param
 	var DrawWorm = function (obj){
 
 		if (Math.random() > 0.9){
@@ -265,8 +243,8 @@ function DrawWorm(){
 	var MouseMove = function(e) {
         mouse.x = e.layerX - canvas.offsetLeft;
         mouse.y = e.layerY - canvas.offsetTop;
-        console.log("logging mouse X - ", mouse.x);
-        console.log("logging mouse Y - ", mouse.y);
+        // console.log("logging mouse X - ", mouse.x);
+        // console.log("logging mouse Y - ", mouse.y);
 	};
 	
 	// Clear the screen

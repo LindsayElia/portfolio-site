@@ -1,6 +1,6 @@
-console.log("file main.js is loaded");
+console.log("file olark-control.js is loaded");
 
-
+// ****************************** OLARK CHAT BOX ******************************
 
 // on initial page load
 // hide Olark on screen sizes 595px or smaller
@@ -33,9 +33,6 @@ $(window).resize(function() {
 });
 	
 
-
-
-
 // use icon in footer to expand & minimize the olark chatbox
 var olarkBoxShrink = true;
 
@@ -48,10 +45,4 @@ showOrHide = function(){
 		olarkBoxShrink = true;
 	}
 };
-
-
-
-
-
-
 

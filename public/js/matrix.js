@@ -1,3 +1,5 @@
+console.log("file matrix.js is loaded");
+
 /*
 * Matrix2D by Grant Skinner. Dec 5, 2010
 * Visit http://easeljs.com/ for documentation, updates and examples.

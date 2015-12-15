@@ -1,4 +1,4 @@
-<% include ../partials/header %>
+<% include ../partials/header-tags %>
 
 <div class="container-main-all-outer"> <!-- so we can position canvas element relatively to this -->
 
@@ -55,7 +55,7 @@
 
 		</div> <!-- close <div class="boxes-group"> -->
 
-		<% include ../partials/footer %>
+		<% include ../partials/footer-navbar %>
 
 	</div> <!-- close <div class="full-home-page-background"> -->
 
@@ -63,4 +63,12 @@
 
 </div> <!-- close div class="container-main-all-outer" -->
 
+
+<!-- only need to load these on home page -->
+<!-- 2D Matrix library for mouseover worms animation -->
+<script type="text/javascript" src="js/matrix.js"></script>
+<!-- worms animation -->
+<script type="text/javascript" src="js/animate-worms.js"></script>
+
+<% include ../partials/footer-tags %>
 
