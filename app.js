@@ -6,6 +6,10 @@ var app = express();
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
+// Tell our app where to find the slick JavaScript for the Portfolio page images
+// not sure if this is best practice but it works
+app.use("/slick", express.static(__dirname + "/node_modules/slick-carousel/slick"));
+
 // serve-favicon - let's us use a custom image for the favicon
 // I don't have a custom favison yet
 // var favicon = require("serve-favicon");

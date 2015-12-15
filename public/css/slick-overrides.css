@@ -1,0 +1,30 @@
+/* To override the default styling included with Slick image carousel CSS */
+
+
+/* arrows */
+.slick-prev:before,
+.slick-next:before {
+	color: #475865;  /* dark blue */
+	font-size: 25px;
+}
+
+.slick-dots-and-arrows-one,
+.slick-dots-and-arrows-two,
+.slick-dots-and-arrows-three,
+.slick-dots-and-arrows-four,
+.slick-dots-and-arrows-five,
+.slick-dots-and-arrows-six {
+    position: relative;
+    left: 25%;
+    width: 50%;
+}
+
+.slick-dots {
+    bottom: 0;
+    margin: 0;
+    position: relative;
+}
+
+.slick-dots li.slick-active button:before {
+	color: #475865;  /* dark blue */
+}

@@ -10,17 +10,20 @@
 	<div class="summary-section">
 		<h1>Made With Code</h1>
 		<p>Whether working with people or lines of code, I strive to be thoughtful, empathetic, and understandable. Common themes found in my work are ease of use, organization, clean design, and accessibility.</p>
-		<p>I specialize in Front End and Full Stack Web Development. I most enjoy writing plain CSS and JavaScript, and am familiar with widely used web application frameworks such as Node/Express, Angular, and Ruby/Rails.</p>
+		<p>I work mostly in Front End and Full Stack Web Development. I most enjoy writing plain CSS and JavaScript, and am familiar with widely used web application frameworks such as Node/Express, Angular, and Ruby/Rails.</p>
 	</div>
 
 
 	<div class="container-project-group clearfix">
 
-		<div class="column-one fade">
-			<img src="img/everyonesphotos1.png" alt="everyones photos application screenshot 1 of 4" class="portfolio-image">
-			<img src="img/everyonesphotos2.png" alt="everyones photos application screenshot 2 of 4" height="200px" class="portfolio-image">
-			<img src="img/everyonesphotos3.png" alt="everyones photos application screenshot 3 of 4" height="200px" class="portfolio-image">
-			<img src="img/everyonesphotos4.png" alt="everyones photos application screenshot 4 of 4" height="200px" class="portfolio-image">
+		<div class="column-one">
+			<div class="slick-fade-one">
+				<div><img src="img/everyonesphotos1.png" alt="everyones photos application screenshot 1 of 4" class="portfolio-image"></div>
+				<div><img src="img/everyonesphotos2.png" alt="everyones photos application screenshot 2 of 4" height="200px" class="portfolio-image"></div>
+				<div><img src="img/everyonesphotos3.png" alt="everyones photos application screenshot 3 of 4" height="200px" class="portfolio-image"></div>
+				<div><img src="img/everyonesphotos4.png" alt="everyones photos application screenshot 4 of 4" height="200px" class="portfolio-image"></div>
+			</div>
+			<nav class="slick-dots-and-arrows-one"></nav>
 		</div>
 
 		<div class="column-two">
@@ -46,7 +49,10 @@
 	<div class="container-project-group clearfix">
 
 		<div class="column-one">
-			<img src="" alt="twixt application screenshot" class="portfolio-image">
+			<div class="slick-fade-two">
+				<img src="" alt="twixt application screenshot" class="portfolio-image">
+			</div>
+			<nav class="slick-dots-and-arrows-two"></nav>
 		</div>
 
 		<div class="column-two">
@@ -70,9 +76,12 @@
 	<div class="container-project-group clearfix">
 
 		<div class="column-one">
-			<img src="img/spotify1.png" alt="spotify game screenshot 1 of 3" height="200px" class="portfolio-image">
-			<!-- <img src="img/spotify2.png" alt="spotify game screenshot 2 of 3" height="200px" class="portfolio-image">
-			<img src="img/spotify3.png" alt="spotify game screenshot 3 of 3" height="200px" class="portfolio-image"> -->
+			<div class="slick-fade-three">
+				<img src="img/spotify1.png" alt="spotify game screenshot 1 of 3" height="200px" class="portfolio-image">
+				<img src="img/spotify2.png" alt="spotify game screenshot 2 of 3" height="200px" class="portfolio-image">
+				<img src="img/spotify3.png" alt="spotify game screenshot 3 of 3" height="200px" class="portfolio-image">
+			</div>
+			<nav class="slick-dots-and-arrows-three"></nav>
 		</div>
 
 		<div class="column-two">
@@ -96,7 +105,10 @@
 	<div class="container-project-group clearfix">
 
 		<div class="column-one">
-			<img src="" alt="portfolio site screenshot" class="portfolio-image">
+			<div class="slick-fade-four">
+				<img src="" alt="portfolio site screenshot" class="portfolio-image">
+			</div>
+			<nav class="slick-dots-and-arrows-four"></nav>
 		</div>
 
 		<div class="column-two">
@@ -119,7 +131,10 @@
 	<div class="container-project-group clearfix">
 
 		<div class="column-one">
-			<img src="img/etchasketch1.png" alt="Etch-A-Sketch screenshot" width="550px" class="portfolio-image">
+			<div class="slick-fade-five">
+				<img src="img/etchasketch1.png" alt="Etch-A-Sketch screenshot" width="550px" class="portfolio-image">
+			</div>
+			<nav class="slick-dots-and-arrows-five"></nav>
 		</div>
 
 		<div class="column-two">
@@ -143,9 +158,12 @@
 	<div class="container-project-group clearfix">
 
 		<div class="column-one">
-			<img src="img/clickart1.png" alt="click art game screenshot 1 of 3" width="350px" class="portfolio-image">
-			<!-- <img src="img/clickart2.png" alt="click art game screenshot 2 of 3" width="350px" class="portfolio-image">
-			<img src="img/clickart3.png" alt="click art game screenshot 3 of 3" width="350px" class="portfolio-image"> -->
+			<div class="slick-fade-six">
+				<img src="img/clickart1.png" alt="click art game screenshot 1 of 3" width="350px" class="portfolio-image">
+				<img src="img/clickart2.png" alt="click art game screenshot 2 of 3" width="350px" class="portfolio-image">
+				<img src="img/clickart3.png" alt="click art game screenshot 3 of 3" width="350px" class="portfolio-image">
+			</div>
+			<nav class="slick-dots-and-arrows-six"></nav>
 		</div>
 
 		<div class="column-two">
@@ -173,6 +191,7 @@
 <% include ../partials/footer-navbar %>
 
 <!-- Slick javascript -->
+<script type="text/javascript" src="/slick/slick.min.js"></script>
 <script type="text/javascript" src="js/slick-image-carousel.js"></script>
 
 <% include ../partials/footer-tags %>
