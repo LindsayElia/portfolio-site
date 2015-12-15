@@ -1,47 +1,79 @@
-// DRAW ANIMATION ON MOUSEOVER
-
 // Forked from [Tim Holman](http://codepen.io/tholman/)'s Pen 
 // [Draw worm](http://codepen.io/tholman/pen/EpfLs/)
 
+$.getDocHeight = function(){
+    return Math.max(
+        $(document).height(),
+        $(window).height(),
+        /* For opera: */
+        document.documentElement.clientHeight
+    );
+};
+ 
+var pageHeight = $.getDocHeight();
+var pageWidth = $(document).width();
+console.log("page height : ", pageHeight);
+console.log("page width : ", pageWidth);
+
+
+// DRAW ANIMATION ON MOUSEOVER
 function DrawWorm(){
   
 	var canvas;
 	var context;
 	var width;
 	var height;
-	var mouse = {x: 0, y: window.innerHeight};
 
-	//Expose the mouse to demo the app.
+	// starting position for animation
+	// var mouse = {x: 0, y: 0};
+	// var mouse = {x: window.innerWidth/2, y: window.innerHeight};
+	var mouse = {x: 10, y: window.innerHeight/2};
+	console.log("VAR mouse - ", mouse);
+
+	// Expose the mouse to demo the app.
 	this.mouse = mouse;
+	console.log("THIS.mouse - ", this.mouse);
 
 	var interval;
 	var vms = [];
 	var MAX_NUM = 100;
 	var N = 80;
-	var px = document.documentElement.clientWidth;
-	var py = window.outerHeight; // these seem to work okay with a number, like 500, also?
-		
+	
+	var px = window.innerWidth/2;
+	// var px = document.documentElement.clientWidth;
+	// var px = pageWidth;
+
+	var py = window.innerHeight;
+	// var py = window.outerHeight; // these seem to work okay with a number, like 500, also?
+	// var py = pageHeight;
+
 	this.initialize = function(){
 		canvas  = document.getElementById("canvas");
 		context = canvas.getContext('2d');
-		width = document.documentElement.clientWidth;  // width of the DOM ONLY, used to be window.innerHeight, but that added a scrollbar
+		// CHANGE BACK?
+		// width = document.documentElement.clientWidth;  // width of the DOM ONLY, used to be window.innerWidth, but that added a scrollbar
+		// width = window.innerWidth;
+		width = pageWidth;
 
-// >>>>>>>>>>>>>>>>
-// update depending on final size of layout & also below, line 57
-		height = window.outerHeight * 1.5; // window.innerHeight - multiply by ?? if needed
+		// CHANGE BACK?
+		// >>>>>>>>>>>>>>>>
+		// update depending on final size of layout & also below, line 57
+		// height = window.outerHeight * 1.5; // used to be window.innerHeight
+										// multiply by ?? if needed
 										// larger number means more white space, below the footer potentially
+		// height = window.innerHeight * 2;
+		height = pageHeight;
+
 		canvas.width = width;
 		canvas.height = height;
-		// canvas.addEventListener('touchmove', TouchMove, false);
+		canvas.addEventListener('touchmove', TouchMove, false);
 		canvas.addEventListener('mousemove', MouseMove, false);
-		
 		// erases lines on click
 		canvas.addEventListener('click', MouseDown, false);
-		
 		//Set interval - Bad?
 		var interval = setInterval(Draw, 20);
 
-
+		// I ADDED THIS
 		// trying out some resize code...
 		// this resizes the canvas if the window is resized
 		window.addEventListener('resize', doTheResize, false);
@@ -50,11 +82,18 @@ function DrawWorm(){
 	// trying out some resize code...
 	// this resizes the canvas if the window is resized
 	function doTheResize(){
-		canvas.width = document.documentElement.clientWidth;
+		// canvas.width = document.documentElement.clientWidth;
+		// canvas.width = window.innerWidth;
+		canvas.width = $(document).width();
+		console.log("new width: ", canvas.width);
 
-// >>>>>>>>>>>>>>>>
-// update depending on final size of layout
-		canvas.height = window.outerHeight * 1.5;  // - multiply by ?? if needed
+		// >>>>>>>>>>>>>>>>
+		// update depending on final size of layout
+		// canvas.height = window.outerHeight * 1.5;  // - multiply by ?? if needed
+		// canvas.height = window.innerHeight * 2;
+		canvas.height = $.getDocHeight();
+		console.log("new height: ", canvas.height);
+
 	}
 
 	var Draw = function(){
@@ -77,6 +116,7 @@ function DrawWorm(){
 		Check();
 	};
 	
+	// CHANGE - GIVE NEW FUNCTION NAME ONCE I FIGURE OUT WHERE IT'S USED
 	//Takes a worm (obj) param
 	var DrawWorm = function (obj){
 
@@ -167,7 +207,7 @@ function DrawWorm(){
 		var w = 0.5;
 
 		var obj = new Worm();
- 		
+ 
 		obj.c1x = (-w * mtx.c + mtx.tx);
 		obj.p1x = (-w * mtx.c + mtx.tx); 	
 		obj.c1y = (-w * mtx.d + mtx.ty);
@@ -215,24 +255,27 @@ function DrawWorm(){
 	// 	context.fill();	
 	// };
 	
+
+	var TouchMove = function(e) {
+		e.preventDefault();
+    	mouse.x = e.targetTouches[0].pageX - canvas.offsetLeft;
+    	mouse.y = e.targetTouches[0].pageY - canvas.offsetTop;
+	};
+	
+	var MouseMove = function(e) {
+        mouse.x = e.layerX - canvas.offsetLeft;
+        mouse.y = e.layerY - canvas.offsetTop;
+        console.log("logging mouse X - ", mouse.x);
+        console.log("logging mouse Y - ", mouse.y);
+	};
+	
 	// Clear the screen
 	var MouseDown = function(e) {
 		e.preventDefault();
 		canvas.width = canvas.width;
 		vms = [];
 	};
-	
-	var MouseMove = function(e) {
-        mouse.x = e.layerX - canvas.offsetLeft;
-        mouse.y = e.layerY - canvas.offsetTop;
-	};
-	
-	// var TouchMove = function(e) {
-	// 	e.preventDefault();
- //    	mouse.x = e.targetTouches[0].pageX - canvas.offsetLeft;
- //    	mouse.y = e.targetTouches[0].pageY - canvas.offsetTop;
-	// };
-	
+
 	//Returns Magnitude
 	var Magnitude = function(x, y){
 		return Math.sqrt((x * x) + (y * y));
@@ -240,7 +283,7 @@ function DrawWorm(){
 			
 }
 
-
+// BRINGING IN MATRIX 2D LIBRARY IN HEADER OR FOOTER, NOT IN PUBIC JS FOLDER
  
 
 var app, interval, count;

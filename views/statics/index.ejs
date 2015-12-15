@@ -1,58 +1,66 @@
 <% include ../partials/header %>
 
-<!-- canvas to hold the animation -->
-<canvas id="canvas">
-</canvas>
-
-
-<div class="full-home-page-overlay">
-
-	<% include ../partials/header-navbar %>
-
-	<div class="container-logo-headshot">
-		<h1 class=".tk-acta-poster-swashes logo">Hello...</h1>
-		<img src="img/lindsay_elia_smileyface.jpg" alt="picture of lindsay elia smiling" class="headshot">
-	</div>
-
-	<div class="welcome-blurb">
-
-		<p>I'm Lindsay. Nice to meet you!</p>
-
-		<p>I really, really enjoy coding, designing, and developing web applications. :) I'm currently looking for work, so <a href="javascript:void(0);" onclick="showOrHide()">get in touch</a> and let's talk.</p>
-
-		<p>I have over 12 years of experience spanning technology, customer service, community building, project coordination, and design. I designed and built this site. Let me know how you like it!</p>
-
-	</div>
-
-
-	<div class="boxes-group">
-
-		<a href="/portfolio" class="dark-link">
-			<div class="boxy">
-				<i class="grid layout icon huge"></i>
-				<div>Portfolio</div>
-			</div>
-		</a>
-
-		<a href="/resume" class="dark-link">
-			<div class="boxy">
-				<i class="idea icon huge"></i>
-				<div>Resume</div>
-			</div>
-		</a>
-
-		<a href="/blog" class="dark-link">
-			<div class="boxy">
-				<i class="write icon huge"></i>
-				<div>Blog</div>
-			</div>
-		</a>
-
-	</div> <!-- close <div class="boxes-group"> -->
-
-</div> <!-- close <div class="full-home-page-background"> -->
+<div class="container-main-all-outer"> <!-- so we can position canvas element relatively to this -->
 
 
 
-<% include ../partials/footer %>
+	<!-- canvas to hold the animation -->
+	<canvas id="canvas">
+	</canvas>
+
+
+
+	<div class="full-home-page-overlay">
+
+		<% include ../partials/header-navbar %>
+
+		<div class="container-logo-headshot">
+			<h1 class=".tk-acta-poster-swashes logo">Hello...</h1>
+			<img src="img/lindsay_elia_smileyface.jpg" alt="picture of lindsay elia smiling" class="headshot">
+		</div>
+
+		<div class="welcome-blurb">
+
+			<p>I'm Lindsay. Nice to meet you!</p>
+
+			<p>I really, really enjoy coding, designing, and developing web applications. :) I'm currently looking for work, so <a href="javascript:void(0);" onclick="showOrHide()">get in touch</a> and let's talk.</p>
+
+			<p>I have over 12 years of experience spanning technology, customer service, community building, project coordination, and design. I designed and built this site. Let me know how you like it!</p>
+
+		</div>
+
+
+		<div class="boxes-group">
+
+			<a href="/portfolio" class="dark-link">
+				<div class="boxy">
+					<i class="grid layout icon huge"></i>
+					<div>Portfolio</div>
+				</div>
+			</a>
+
+			<a href="/resume" class="dark-link">
+				<div class="boxy">
+					<i class="idea icon huge"></i>
+					<div>Resume</div>
+				</div>
+			</a>
+
+			<a href="/blog" class="dark-link">
+				<div class="boxy">
+					<i class="write icon huge"></i>
+					<div>Blog</div>
+				</div>
+			</a>
+
+		</div> <!-- close <div class="boxes-group"> -->
+
+		<% include ../partials/footer %>
+
+	</div> <!-- close <div class="full-home-page-background"> -->
+
+
+
+</div> <!-- close div class="container-main-all-outer" -->
+
 

@@ -165,7 +165,8 @@ HEADER & NAVBAR
 ******************************************/
 
 .container-main-all-outer {
-	position: relative;  /* need to give a position: relative so we can give canvas child element a position: absolute */
+	position: relative;  /* need to give a position: relative so we can give the
+	elements on index page that we want to sit on top of the canvas a position: absolute */
 }
 
 .container-header-outer {
@@ -507,13 +508,19 @@ PORTFOLIO PAGE
 
 	/*	TO GO WITH BACKGROUND ANIMATION - HOME PAGE ONLY  */
 	.full-home-page-overlay {
-		opacity: 1; /* this overlays all of the home page content on top of the canvas, and lets us see the canvas behind it */
-		height: 1px; /* needs a height or else it doesn't display the canvas behind it */
+		min-height: 1px; /* needs a height or else it doesn't display the canvas behind it */
 		position: absolute;  /* this is absolutely positioned relative to its parent element */
 		top: 0;
 		left: 0;
 		width: 100%;
+		pointer-events: none; /* This lets the mouseover events skip over this element and affect
+		the canvas element instead */
 	}
+
+		.full-home-page-overlay * {
+			pointer-events: all;  /* We need all the child elements of this div to be affected 
+			by mouse events, such as links, so they work */
+		}
 
 	.container-logo-headshot {
 		width: 650px;
@@ -545,7 +552,7 @@ PORTFOLIO PAGE
 		display: block; /* make visible */
 		width: 240px;
 		background-color: #F7F8FA;
-		margin: 0.5em auto;
+		margin: 0.5em auto 50px auto;
 		padding: 1px 1em;  /* top/bottom are to take care of collapsing vertical margins,
 		left/right are to give space from the animation behind & keep box a square shape */
 		text-align: center;
