@@ -247,13 +247,13 @@ CENTER AREA - HOME PAGE ONLY
 
 	.logo {
 		margin: 0 auto;
-		width: 400px;
+		max-width: 400px;
 		padding-top: 1px;  /* to take care of collapsing vertical margins */
 		padding-bottom: 1px;  /* to take care of collapsing vertical margins */
 		padding-right: 16px;  /* to center text since font seems to be off-center */
 		text-align: center;
 		font-family: "acta-poster-swashes", sans-serif;
-		font-size: 5em;
+		font-size: 4em;
 		color: #475865;  /* dark blue */
 	}
 
@@ -468,6 +468,10 @@ PORTFOLIO PAGE
 
 	.container-main-content {
 		min-height: calc(100vh - 330px);  /* to create a sticky footer */
+	}
+
+	.logo {
+		font-size: 5em;
 	}
 
 	.headshot {
