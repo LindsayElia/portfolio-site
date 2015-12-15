@@ -222,10 +222,13 @@ CENTER AREA - ALL PAGES EXCEPT HOME PAGE
 	min-height: calc(100vh - 490px);  /* to create a sticky footer */
 }
 
-/*using on eror page*/
-.container-main-content-inner {
+.summary-section {
+	margin: 0 auto;
 	padding-left: 1em;
 	padding-right: 1em;
+	padding-bottom: 25px;
+	text-align: center;
+	max-width: 570px;
 }
 
 
@@ -609,12 +612,7 @@ PORTFOLIO PAGE
 RESUME PAGE
 ******************************************/
 
-.timeline-summary-section {
-	margin: 0 auto;
-	padding-bottom: 25px;
-	text-align: center;
-	max-width: 570px;
-}
+
 
 /* h1 */
 .timeline-header {
