@@ -8,6 +8,7 @@
 	font-size: 25px;
 }
 
+
 .slick-dots-and-arrows-one,
 .slick-dots-and-arrows-two,
 .slick-dots-and-arrows-three,
@@ -15,8 +16,8 @@
 .slick-dots-and-arrows-five,
 .slick-dots-and-arrows-six {
     position: relative;
-    left: 25%;
-    width: 50%;
+    left: 10%;
+    width: 80%;
 }
 
 .slick-dots {

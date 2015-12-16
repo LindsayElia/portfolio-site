@@ -95,6 +95,10 @@ h3 {
 	margin: 0;
 }
 
+ul>li {
+	color: #939097;  /* gray */
+}
+
 
 /******************************************
 ICONS
@@ -343,7 +347,9 @@ PORTFOLIO PAGE
 	.column-two {
 		display: inline-block;
 		margin: 0 auto;
-		max-width: 600px;
+		width: 100%;
+		max-width: 600px;	/* added so that resize happens as expected after
+		addition of slick image carousel */
 		padding: 1em;
 		text-align: left;
 	}
@@ -351,7 +357,10 @@ PORTFOLIO PAGE
 	.portfolio-image {
 		border: 1px solid gray;
 		max-width: 100%;
+		height: initial;	/* added so that dots & arrows sit just below largest image
+		in slide carouse group, with addition of slick image carousel */
 	}
+
 
 
 

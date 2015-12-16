@@ -8,9 +8,35 @@ $(document).ready(function(){
 	console.log("hello from slick function");
 
 
-	// CREATING A CAROUSEL FOR EACH SET OF IMAGES, SO THAT DOTS & ARROWS DON'T APPLY TO MORE THAN ONE GROUP OF IMAGES
-	// IS REDUNDANT BUT NOT AN ISSUE SLICK IS DESIGNED FOR - https://github.com/kenwheeler/slick/issues/1103
-	// https://github.com/kenwheeler/slick/pull/1771 - for example of how to style arrows in line with dots
+	// Add & remove the 'clearfix' class to the divs that need it on larger screen sizes
+	// removing it on smaller screens allows the image to resize - slick was breaking the resize the 
+	// way I had it styled
+	$(window).load(function() {
+		if ($(window).width() > 800) {
+			$(".container-project-group").addClass("clearfix");
+			console.log("a");
+		} else {
+			$(".container-project-group").removeClass("clearfix");
+			console.log("b");
+		}
+	});
+
+	$(window).resize(function() {
+		var currentWidth = $(this).width();
+		if(currentWidth > 800 ) {
+			$(".container-project-group").addClass("clearfix");
+			console.log("c");
+		} else {
+			$(".container-project-group").removeClass("clearfix");
+			console.log("d");
+		}
+	});
+
+
+
+	// Creating a carousel for each set of images, so that dots and arrows don't apply to more than one group of images
+	// It's redundant but not an issue Slick is designed to handle - https://github.com/kenwheeler/slick/issues/1103
+	// For example of how to style arrows in line with dots: https://github.com/kenwheeler/slick/pull/1771
 	var dotsArrows1 = $(".slick-dots-and-arrows-one"),
 		dotsArrows2 = $(".slick-dots-and-arrows-two"),
 		dotsArrows3 = $(".slick-dots-and-arrows-three"),
@@ -29,7 +55,8 @@ $(document).ready(function(){
 		arrows: true,			// Enable Next/Prev arrows
 		appendArrows: dotsArrows1,
 		appendDots: dotsArrows1,
-		swipe: true				// Enables touch swipe
+		swipe: true,			// Enables touch swipe
+		slidesToShow: 1
 	});
 
 	$(".slick-fade-two").slick({
