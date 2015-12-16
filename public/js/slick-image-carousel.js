@@ -11,24 +11,27 @@ $(document).ready(function(){
 	// Add & remove the 'clearfix' class to the divs that need it on larger screen sizes
 	// removing it on smaller screens allows the image to resize - slick was breaking the resize the 
 	// way I had it styled
+	var currentWidth;
+
 	$(window).load(function() {
-		if ($(window).width() > 800) {
+		currentWidth = $(window).width();
+		if (currentWidth > 785) {
+			console.log("a - width: ", currentWidth);
 			$(".container-project-group").addClass("clearfix");
-			console.log("a");
 		} else {
+			console.log("b - width: ", currentWidth);
 			$(".container-project-group").removeClass("clearfix");
-			console.log("b");
 		}
 	});
 
 	$(window).resize(function() {
-		var currentWidth = $(this).width();
-		if(currentWidth > 800 ) {
+		currentWidth = $(this).width();
+		if(currentWidth > 785 ) {
+			console.log("c - width: ", currentWidth);
 			$(".container-project-group").addClass("clearfix");
-			console.log("c");
 		} else {
+			console.log("d - width: ", currentWidth);
 			$(".container-project-group").removeClass("clearfix");
-			console.log("d");
 		}
 	});
 
