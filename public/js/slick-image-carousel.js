@@ -55,8 +55,7 @@ $(document).ready(function(){
 		arrows: true,			// Enable Next/Prev arrows
 		appendArrows: dotsArrows1,
 		appendDots: dotsArrows1,
-		swipe: true,			// Enables touch swipe
-		slidesToShow: 1
+		swipe: true				// Enables touch swipe
 	});
 
 	$(".slick-fade-two").slick({
