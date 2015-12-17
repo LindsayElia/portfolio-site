@@ -2,15 +2,12 @@
 FONTS
 ******************************************/
 
-/* 
-***************************** TO FIX *****************************
-Am I using all of these fonts?
-Remove ones not being used for page load time */
 
 /* also loading some fonts from Typekit in head of html */
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,500,700,800); /* Headings ?? */
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,700italic,900); /* body / content */
 
+/* not currently using these: */
+/* @import url(https://fonts.googleapis.com/css?family=Raleway:400,200,500,700,800); Headings ?? */
+/* @import url(https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,700italic,900); body / content */
 
 /* I seem to have access to general fonts of:; "Avenir Next","Avenir","Helvetica Neue",Helvetica,Arial, all with browser? */
 
@@ -36,6 +33,7 @@ black
 
 pea green / mellow yellow
 #D6CC4E
+rgb(214,204,78)
 
 green
 #7C812D
@@ -232,7 +230,7 @@ CENTER AREA - ALL PAGES EXCEPT HOME PAGE
 	padding-right: 1em;
 	padding-bottom: 25px;
 	text-align: center;
-	max-width: 570px;
+	max-width: 590px;
 }
 
 
@@ -330,8 +328,6 @@ FOOTER
 	}
 
 
-
-
 /******************************************
 PORTFOLIO PAGE
 ******************************************/
@@ -340,7 +336,7 @@ PORTFOLIO PAGE
 	text-align: center;
 	padding-top: 1em;
 	border-top: 0.5px solid #939097;   /*gray*/ 
-	box-shadow: inset 0 9px 10px -11px rgba(147,144,151, .8);  /*gray*/ 
+	box-shadow: inset 0 9px 10px -11px rgba(147,144,151, 0.8);  /*gray*/ 
 	}
 
 	.column-one,
@@ -362,10 +358,71 @@ PORTFOLIO PAGE
 	}
 
 
+/******************************************
+RESUME PAGE
+******************************************/
 
+.resume-content-container-outer {
+	position: relative;
+}
 
+/* center bar CSS found on http://jeaniechung.com/#/cv */
+.resume-content-container-outer::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -4px;
+	width: 8px;
+	height: 100%;		/* for this to be 100% of containing element, not of the window viewport,
+	need to give containing element a position: relative */
+	background-color: rgba(214,204,78,0.5);
+}
 
+.timeline-group {
+	background: linear-gradient(to bottom, #F7F8FA, #475865);
+	padding-bottom: 50px;
+}
 
+.section-heading {
+	color: #475865;  /* dark blue */
+	background-color: #F7F8FA;  /* white with blue tint */
+	text-align: center;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: relative;  /* needed for z-index to apply */
+	z-index: 10;  /* to get these to appear on top of the vertical white line in center */
+}
+
+.timeline-blurb {
+	padding: 20px;
+	background-color: #F7F8FA;  /* white with blue tint */
+	box-shadow: 0 10px 10px -5px rgba(0,0,0, .8);  /* black with some transparency */
+}
+
+	.timeline-heading {
+		font-size: 1.2em;
+	}
+
+	.timeline-subheading {
+		text-transform: uppercase;
+		font-size: 1.2em;
+	}
+
+	.timeline-date {
+		font-weight: 500;
+		margin-bottom: 10px;
+	}
+
+.timeline-left {
+	width: 40%;
+	margin-left: 2.5%;
+}
+
+.timeline-right {
+	width: 40%;
+	margin-left: 54%; 
+}
 
 
 
@@ -572,11 +629,8 @@ PORTFOLIO PAGE
 
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 /* http://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-tablet-and-mobile */
+/* display canvas in larger views only; it seems to break the page on mobile phones in landscape */
 @media (min-width: 801px) {
-
-
-	/* display canvas in larger views only;
-	it seems to break the page on mobile phones in landscape */
 
 	/*	BACKGROUND ANIMATION - HOME PAGE ONLY  */
 	#canvas {
@@ -617,118 +671,7 @@ PORTFOLIO PAGE
 			padding-left: 1.5em;
 		}
 
-}
-
-
-
-
-
-
-
-
-
-/******************************************
-RESUME PAGE
-******************************************/
-
-
-
-/* h1 */
-.timeline-header {
-	/*font-family: 'Railway', sans-serif;*/
-	/*font-family: "Lato",sans-serif;*/
-	font-weight: normal;
-}
-
-
-.resume-content-container-outer {
-	background-color: #475865;  /* dark blue */
-	/*margin-bottom: 200px;*/
-}
-
-/* center bar CSS found on http://jeaniechung.com/#/cv */
-.resume-content-container-outer::before {
-	content: "";
-	position: absolute;
-	left: 50%;
-	margin-left: -5px;
-	height: 80%;			/* TO FIX:;
-							I doubled this so it would extend - not sure why it's not same height as element appears to me */
-							/* breaks when screen is made smaller - to fix later */
-							/* pushes bottom part of page out further - adds white space / moves away from bottom of page */
-	width: 10px;
-	/*background-color: #F7F8FA;*/
-	
-	background: linear-gradient(
-					to bottom, 
-					transparent 0, 
-					#F7F8FA 8%, 
-					#F7F8FA 92%, 
-					transparent 100%
-					);
-
-	/*background: linear-gradient(to bottom,rgba(31,102,177,0) 0,#1f66b1 8%,#1f66b1 92%,rgba(158,21,15,0) 100%);*/
-}
-
-.resume-content-container-inner {
-	width: 95%;
-	margin: auto;
-	padding-top: 50px;
-	padding-bottom: 50px;
-}
-
-.timeline-blurb {
-	/*border: 2px solid gray;*/
-	padding: 20px;
-	background-color: #F7F8FA;
-	box-shadow: 0 10px 10px -5px rgba(0,0,0, .8);
-}
-
-.timeline-left {
-	width: 40%;
-	margin-left: 2.5%;
-}
-
-.timeline-right {
-	width: 40%;
-	margin-left: 54%; 
-}
-
-.timeline-heading {
-	font-size: 1.2em;
-}
-
-.timeline-subheading {
-	text-transform: uppercase;
-	font-size: 1.2em;
-}
-
-.timeline-date {
-	font-weight: 500;
-	margin-bottom: 10px;
-}
-
-.section-break {
-	color: #F7F8FA;
-	text-align: center;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	background-color: #475865;  /* dark blue */
-	width: 220px;
-	position: relative;
-	left: 41.5%;		/* TO FIX: this is not centered with summary section because 
-						it's nested in more divs with more margins, etc than the summary section has */
-}
-
-
-
-
-
-
-
-
-
-
+} /* end media query for min-width: 801px */
 
 
 
