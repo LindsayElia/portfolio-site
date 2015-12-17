@@ -17,9 +17,6 @@ COLOR PALETTE
 
 /*
 
-***************************** TO FIX *****************************
-Remove colors not being used
-
 white with blue tint
 #F7F8FA
 rgb(247,248,250)
@@ -35,16 +32,20 @@ pea green / mellow yellow
 #D6CC4E
 rgb(214,204,78)
 
-green
-#7C812D
-
-teal
-#008F7D
-
 dark blue
 #475865
 rgd(71,68,101)
 
+
+
+***************************** TO FIX *****************************
+Remove colors not being used
+
+teal
+#008F7D
+
+green
+#7C812D
 
 lighter gray for readability
 using this on blog pages for tags background color
@@ -362,22 +363,6 @@ PORTFOLIO PAGE
 RESUME PAGE
 ******************************************/
 
-.resume-content-container-outer {
-	position: relative;
-}
-
-/* center bar CSS found on http://jeaniechung.com/#/cv */
-.resume-content-container-outer::before {
-	content: "";
-	position: absolute;
-	left: 50%;
-	margin-left: -4px;
-	width: 8px;
-	height: 100%;		/* for this to be 100% of containing element, not of the window viewport,
-	need to give containing element a position: relative */
-	background-color: rgba(214,204,78,0.5);
-}
-
 .timeline-group {
 	background: linear-gradient(to bottom, #F7F8FA, #475865);
 	padding-bottom: 50px;
@@ -414,15 +399,12 @@ RESUME PAGE
 		margin-bottom: 10px;
 	}
 
-.timeline-left {
-	width: 40%;
-	margin-left: 2.5%;
+.timeline-left,
+.timeline-right {
+	width: 80%;
+	margin: 1em auto;
 }
 
-.timeline-right {
-	width: 40%;
-	margin-left: 54%; 
-}
 
 
 
@@ -447,6 +429,7 @@ RESUME PAGE
 
 @media (min-width: 499px) {
 
+	/* HEADER */
 	.container-header-outer {
 		border-bottom: 10px solid #939097; /* gray */
 	}
@@ -532,6 +515,7 @@ RESUME PAGE
 	  animation-name: fadeInDown;
 	}
 
+	/* CENTER */
 	.container-main-content {
 		min-height: calc(100vh - 330px);  /* to create a sticky footer */
 	}
@@ -556,12 +540,18 @@ RESUME PAGE
 
 @media (min-width: 595px) {
 
-	/* header */
+	/* HEADER */
 	.nav-item>a {
 		padding: 10px 20px;
 	}
 
-	/* footer */
+	/* CENTER */
+	.container-main-content {
+		min-height: calc(100vh - 350px);  /* to create a sticky footer */
+		max-width: 1000px;
+	}
+
+	/* FOOTER */
 	.footer {
 		font-size: 1em;
 	}
@@ -571,6 +561,7 @@ RESUME PAGE
 		margin: 0 auto;
 	}
 
+	/* HOME PAGE */
 	.container-logo-headshot {
 		width: 650px;
 		padding-top: 20px;  /* to give space from animation */
@@ -617,11 +608,32 @@ RESUME PAGE
 			
 		}
 
-	.container-main-content {
-		min-height: calc(100vh - 350px);  /* to create a sticky footer */
-		max-width: 1000px;
+	/* RESUME */
+	.resume-content-container-outer {
+		position: relative;
 	}
 
+	/* center bar CSS found on http://jeaniechung.com/#/cv */
+	.resume-content-container-outer::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		margin-left: -4px;
+		width: 8px;
+		height: 100%;		/* for this to be 100% of containing element, not of the window viewport,
+		need to give containing element a position: relative */
+		background-color: rgba(214,204,78,0.5);
+	}
+	
+	.timeline-left {
+		width: 40%;
+		margin-left: 2.5%;
+	}
+
+	.timeline-right {
+		width: 40%;
+		margin-left: 54%; 
+	}
 
 }  /* end media query for min-width: 595px */
 
