@@ -1,7 +1,10 @@
 <% include ../partials/header-tags %>
 
-<% include ../partials/header-navbar %>
+<!-- Slick javascript -->
+<script type="text/javascript" src="/slick/slick.min.js"></script>
+<script type="text/javascript" src="js/slick-image-carousel.js"></script>
 
+<% include ../partials/header-navbar %>
 
 
 <div class="container-main-content"> 
@@ -14,9 +17,17 @@
 	</div>
 
 
-	<div class="container-project-group"> 
-	<!-- dynamically adding & removing class 'clearfix' from this div after adding slick image carousel, loading from js/slick-image-carousel.js linked to at bottom of this file
-	reason for this is noted in that file !-->
+	<div class="container-project-group clearfix"> 
+	<!-- 
+	* Dynamically adding & removing class 'clearfix' from this div after adding slick image carousel, loading from js/slick-image-carousel.js linked to at top of this file.
+	* Deason for this is noted in that file.
+	* Keeping clearfix class on this element in case page is loaded wider than 801px, 
+	the floats won't collapse this parent element and we don't see the lines before the page 
+	iss fully loaded. There is still a bit of wonkiness but it's less noticeable than seeing
+	all of the lines like we did before I changed this.
+	* Also I moved the loading of the slick js file to the top instead of from the 
+	bottom. hopefully that won't break anything! it seems to be ok for now.
+	!-->
 
 		<div class="column-one"> 
 			<div class="slick-fade-one">
@@ -52,9 +63,8 @@
 
 
 <!-- TO FIX - ADD SREENSHOTS, EDIT SUMMARY, INCLUDE WHICH PARTS I WORKED ON SPECIFICALLY, EDIT STACK/API DETAILS, UPDATE LINKS,  -->
-	<div class="container-project-group">
-	<!-- dynamically adding & removing class 'clearfix' from this div after adding slick image carousel, loading from js/slick-image-carousel.js linked to at bottom of this file
-	reason for this is noted in that file !-->
+	<div class="container-project-group clearfix">
+	<!-- see comment on first instance of container-project-group for more about clearfix !-->
 
 		<div class="column-one">
 			<div class="slick-fade-two">
@@ -82,9 +92,8 @@
 	</div>
 
 
-	<div class="container-project-group">
-	<!-- dynamically adding & removing class 'clearfix' from this div after adding slick image carousel, loading from js/slick-image-carousel.js linked to at bottom of this file
-	reason for this is noted in that file !-->
+	<div class="container-project-group clearfix">
+	<!-- see comment on first instance of container-project-group for more about clearfix !-->
 
 		<div class="column-one">
 			<div class="slick-fade-three">
@@ -114,9 +123,8 @@
 	</div>
 
 <!-- TO FIX - ADD SREENSHOTS, EDIT SUMMARY, INCLUDE WHICH PARTS I WORKED ON SPECIFICALLY, EDIT STACK/API DETAILS, UPDATE LINKS,  -->
-	<div class="container-project-group">
-	<!-- dynamically adding & removing class 'clearfix' from this div after adding slick image carousel, loading from js/slick-image-carousel.js linked to at bottom of this file
-	reason for this is noted in that file !-->
+	<div class="container-project-group clearfix">
+	<!-- see comment on first instance of container-project-group for more about clearfix !-->
 
 		<div class="column-one">
 			<div class="slick-fade-four">
@@ -151,9 +159,8 @@
 	</div>
 
 
-	<div class="container-project-group">
-	<!-- dynamically adding & removing class 'clearfix' from this div after adding slick image carousel, loading from js/slick-image-carousel.js linked to at bottom of this file
-	reason for this is noted in that file !-->
+	<div class="container-project-group clearfix">
+	<!-- see comment on first instance of container-project-group for more about clearfix !-->
 
 		<div class="column-one">
 			<div class="slick-fade-five">
@@ -184,9 +191,8 @@
 	</div>
 
 
-	<div class="container-project-group">
-	<!-- dynamically adding & removing class 'clearfix' from this div after adding slick image carousel, loading from js/slick-image-carousel.js linked to at bottom of this file
-	reason for this is noted in that file !-->
+	<div class="container-project-group clearfix">
+	<!-- see comment on first instance of container-project-group for more about clearfix !-->
 
 		<div class="column-one">
 			<div class="slick-fade-six">
@@ -220,10 +226,4 @@
 
 
 <% include ../partials/footer-navbar %>
-
-<!-- Slick javascript -->
-<script type="text/javascript" src="/slick/slick.min.js"></script>
-<script type="text/javascript" src="js/slick-image-carousel.js"></script>
-
 <% include ../partials/footer-tags %>
-
